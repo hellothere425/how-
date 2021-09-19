@@ -4328,17 +4328,17 @@ end)
 		end)
 
 
-		local btn421 = Instance.new('TextButton',frame)
-		btn421.Position = UDim2.new(0, 200,0.95,0)
-		btn421.Size = UDim2.new(0, 200,0, 30)
-		btn421.BackgroundTransparency = 0
-		btn421.BackgroundColor3 = Color3.new(0,0,0)
-		btn421.TextScaled = true
-		btn421.Text = 'weld to torp' 
-		btn421.TextColor3 = Color3.new(0,0,52)
-		btn421.BorderSizePixel = 3
-		btn421.BorderColor3 = Color3.new(0,0,52)
-		btn421.MouseButton1Click:Connect(function()
+		local btn422 = Instance.new('TextButton',frame)
+		btn422.Position = UDim2.new(0, 200,0.95,0)
+		btn422.Size = UDim2.new(0, 200,0, 30)
+		btn422.BackgroundTransparency = 0
+		btn422.BackgroundColor3 = Color3.new(0,0,0)
+		btn422.TextScaled = true
+		btn422.Text = 'weld to torp' 
+		btn422.TextColor3 = Color3.new(0,0,52)
+		btn422.BorderSizePixel = 3
+		btn422.BorderColor3 = Color3.new(0,0,52)
+		btn422.MouseButton1Click:Connect(function()
 			btn421.TextColor3 = Color3.new(1,0,0)
 			local weld = Instance.new('Weld')
                        Weld.Part0 = workspace.PotatoKillerHD21
