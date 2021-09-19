@@ -20,6 +20,10 @@ elseif game.Players.LocalPlayer.Name == 'Broodje_Eend' then
 	number = 290970734
 	elseif game.Players.LocalPlayer.Name == 'paulobrasil33' then
 	number = 100064457
+	elseif game.Players.LocalPlayer.Name == 'mamazak' then
+	number = 315527622
+	elseif game.Players.LocalPlayer.Name == 'WonderfulDevonLeeuw' then
+	number = 118727950
 end
 
 --Properties:
