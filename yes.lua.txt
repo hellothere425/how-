@@ -1,3 +1,411 @@
+
+local commands = {}
+local poop = false
+local prefix = "!"
+local uw = ''
+local rejoining = ''
+local cmdp = game:GetService("Players")
+local cmdlp = cmdp.LocalPlayer
+
+function findPlayer(name)
+	if name == "me" then
+		return cmdlp
+	elseif name == "random" then 
+		return cmdp:GetPlayers()[math.random(1,#cmdp:GetPlayers())]
+	elseif name == "new" then
+		local vAges = {} 
+		for _,v in pairs(cmdp:GetPlayers()) do
+			if v.AccountAge < 30 and v ~= cmdlp then
+				vAges[#vAges+1] = v
+			end
+		end
+		return vAges[math.random(1,#vAges)]
+	elseif name == "old" then
+		local vAges = {} 
+		for _,v in pairs(cmdp:GetPlayers()) do
+			if v.AccountAge > 30 and v ~= cmdlp then
+				vAges[#vAges+1] = v
+			end
+		end
+		return vAges[math.random(1,#vAges)]
+	elseif name == "bacon" then
+		local vAges = {} 
+		for _,v in pairs(cmdp:GetPlayers()) do
+			if v.Character:FindFirstChild("Pal Hair") or v.Character:FindFirstChild("Kate Hair") and v ~= cmdlp then
+				vAges[#vAges+1] = v
+			end
+		end
+		return vAges[math.random(1,#vAges)]
+	elseif name == "friend" then
+		local vAges = {} 
+		for _,v in pairs(cmdp:GetPlayers()) do
+			if v:IsFriendsWith(cmdlp.UserId) and v ~= cmdlp then
+				vAges[#vAges+1] = v
+			end
+		end
+		return vAges[math.random(1,#vAges)]
+	elseif name == "notfriend" then
+		local vAges = {} 
+		for _,v in pairs(cmdp:GetPlayers()) do
+			if not v:IsFriendsWith(cmdlp.UserId) and v ~= cmdlp then
+				vAges[#vAges+1] = v
+			end
+		end
+		return vAges[math.random(1,#vAges)]
+	elseif name == "ally" then
+		local vAges = {} 
+		for _,v in pairs(cmdp:GetPlayers()) do
+			if v.Team == cmdlp.Team and v ~= cmdlp then
+				vAges[#vAges+1] = v
+			end
+		end
+		return vAges[math.random(1,#vAges)]
+	elseif name == "enemy" then
+		local vAges = {} 
+		for _,v in pairs(cmdp:GetPlayers()) do
+			if v.Team ~= cmdlp.Team then
+				vAges[#vAges+1] = v
+			end
+		end
+		return vAges[math.random(1,#vAges)]
+	elseif name == "near" then
+		local vAges = {} 
+		for _,v in pairs(cmdp:GetPlayers()) do
+			if v ~= cmdlp then
+				local math = (v.Character:FindFirstChild("HumanoidRootPart").Position - cmdlp.Character.HumanoidRootPart.Position).magnitude
+				if math < 30 then
+					vAges[#vAges+1] = v
+				end
+			end
+		end
+		return vAges[math.random(1,#vAges)]
+	elseif name == "far" then
+		local vAges = {} 
+		for _,v in pairs(cmdp:GetPlayers()) do
+			if v ~= cmdlp then
+				local math = (v.Character:FindFirstChild("HumanoidRootPart").Position - cmdlp.Character.HumanoidRootPart.Position).magnitude
+				if math > 30 then
+					vAges[#vAges+1] = v
+				end
+			end
+		end
+		return vAges[math.random(1,#vAges)]
+	else 
+		for _,v in pairs(cmdp:GetPlayers()) do
+			if string.find(string.lower(v.Name),string.lower(name)) then
+				return v
+			end
+		end
+	end
+end
+
+
+commands.rejoin = function()
+	local ts = game:GetService("TeleportService")
+
+local p = game:GetService("Players").LocalPlayer
+
+ 
+
+ts:Teleport(game.PlaceId, p)
+end
+
+commands.sun = function()
+	game.Players.LocalPlayer.Character.SafeZoneShield:Destroy()
+game.Players.LocalPlayer.Character.ChildAdded:Connect(function(E)
+if E.Name == "SafeZoneShield" then
+wait(0.5)
+game.Players.LocalPlayer.Character.SafeZoneShield:Destroy()
+end
+end)
+end
+
+
+commands.rj = function()
+local ts = game:GetService("TeleportService")
+
+local p = game:GetService("Players").LocalPlayer
+
+ 
+
+ts:Teleport(game.PlaceId, p)
+end
+
+commands.speed = function(sender,arguments)
+
+	local playerToGiveSpeedTo = arguments[1]
+	local amountOfSpeedToGive = arguments[2]
+
+	if playerToGiveSpeedTo then
+		local plr = findPlayer(playerToGiveSpeedTo)
+
+		if plr then
+			plr.Character.Humanoid.WalkSpeed = tonumber(amountOfSpeedToGive)
+			print(playerToGiveSpeedTo.."Was given"..amountOfSpeedToGive.."Walkspeed")
+		end
+	end
+
+end
+
+commands.primitivenovoid = function(sender)
+	poop = false
+
+	local A_1 = "on"
+	local A_2 = "All"
+	local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+	Event:FireServer(A_1, A_2)
+	game["Run Service"].RenderStepped:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
+	end)
+end
+commands.lagchat = function(sender)
+	local A_1 = "#######################################################################"
+local A_2 = "All"
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+Event:FireServer(A_1, A_2)
+	local A_1 = "#######################################################################"
+local A_2 = "All"
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+Event:FireServer(A_1, A_2)
+	local A_1 = "#######################################################################"
+local A_2 = "All"
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+Event:FireServer(A_1, A_2)
+	local A_1 = "#######################################################################"
+local A_2 = "All"
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+Event:FireServer(A_1, A_2)
+	local A_1 = "#######################################################################"
+local A_2 = "All"
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+Event:FireServer(A_1, A_2)
+
+end
+
+
+
+commands.spin = function(sender, arguments)
+	power = tonumber(arguments[1]) 
+
+	game:GetService('RunService').Stepped:connect(function()
+		if hastospin == true then return end
+		game.Players.LocalPlayer.Character.Head.CanCollide = false
+		game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
+		game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
+	end)
+	wait(.1)
+	local bambam = Instance.new("BodyThrust")
+	bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+	bambam.Force = Vector3.new(power,power,power)
+	bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+end
+
+commands.antilogs = function(sender, arguments)
+
+	local A_1 = "anti log pickle"
+	local A_2 = "All"
+	local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+	Event:FireServer(A_1, A_2)
+	local mt = getrawmetatable(game)
+	local old = mt.__namecall
+	setreadonly(mt, false)
+
+	mt.__namecall = newcclosure(function(self, ...)
+
+		local args = {...}
+		local method = getnamecallmethod()
+
+		if method == "Fire" and self.Name == "MessagePosted" then
+			return wait(9e9)
+		end
+
+		return old(self, ...)
+
+	end)
+
+
+	local CloneFunction = clonefunction
+	local CheckCaller = CloneFunction(checkcaller)
+	local HookFunction = CloneFunction(hookfunction)
+	local LocalPlayer = game.Players.PlayerAdded:wait()
+
+	local PostMessage = require(LocalPlayer:WaitForChild("PlayerScripts", 1/0):WaitForChild("ChatScript", 1/0):WaitForChild("ChatMain", 1/0)).MessagePosted
+	getgenv().MessageEvent = Instance.new("BindableEvent")
+
+	local OldFunctionHook
+	local PostMessageHook = function(self, msg)
+		if not CheckCaller() and self == PostMessage then
+			MessageEvent:Fire(msg)
+			return
+		end
+		return OldFunctionHook(self, msg)
+	end
+	OldFunctionHook = HookFunction(PostMessage.fire, PostMessageHook)
+end
+
+
+
+
+
+
+
+
+commands.tp = function(sender, arguments)
+	print("Fired by"..sender.Name)
+
+	for i, playerName in pairs(arguments) do
+		print(playerName)
+	end
+
+	local playerToTeleportName = arguments[1]
+	local playerToTeleportToName = arguments[2]
+
+	if playerToTeleportName and playerToTeleportToName then
+
+		local plrToTP = findPlayer(playerToTeleportName)
+		local plrToTPTo = findPlayer(playerToTeleportToName)
+
+
+		if plrToTP and plrToTPTo then
+			plrToTP.Character.HumanoidRootPart.CFrame = CFrame.new(plrToTPTo.Character.HumanoidRootPart.Position)
+		end
+	end
+end
+
+
+commands.ultrappscript = function(sender,arguments)
+uw = false
+
+
+	local playerToTeleportToName = arguments[1]
+
+	if  playerToTeleportToName then
+		local plrToTPTo = findPlayer(playerToTeleportToName)
+
+
+		if plrToTPTo then
+			UltraPpScript = false
+			game["Run Service"].Heartbeat:Connect(function()
+				if uw == true then return end
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =  CFrame.new(game.Players[plrToTPTo.Name].Character.UpperTorso.Position) * CFrame.new(0, 0, 0)
+					game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_Start",game.Players[plrToTPTo.Name]})
+
+					game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_End"})
+
+					game.Players.LocalPlayer.Character.RightUpperArm:Remove()
+					game.Players.LocalPlayer.Character.LeftUpperArm:Remove()
+				end)  end end 
+
+
+end
+
+
+commands.ppscript = function(sender,arguments)
+uw = false
+
+
+	local playerToTeleportToName = arguments[1]
+
+	if  playerToTeleportToName then
+		local plrToTPTo = findPlayer(playerToTeleportToName)
+
+
+		if plrToTPTo then
+			UltraPpScript = false
+			game["Run Service"].Heartbeat:Connect(function()
+				if uw == true then return end
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =  CFrame.new(game.Players[plrToTPTo.Name].Character.UpperTorso.Position) * CFrame.new(0, 0, 0)
+					game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_Start",game.Players[plrToTPTo.Name]})
+
+					game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_End"})
+
+					
+				end)  end end 
+
+
+end
+
+
+
+commands.ppsc = function(sender,arguments)
+uw = false
+
+
+	local playerToTeleportToName = arguments[1]
+
+	if  playerToTeleportToName then
+		local plrToTPTo = findPlayer(playerToTeleportToName)
+
+
+		if plrToTPTo then
+			UltraPpScript = false
+			game["Run Service"].Heartbeat:Connect(function()
+				if uw == true then 
+plrToTPTo = nil
+
+else
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =  CFrame.new(game.Players[plrToTPTo.Name].Character.UpperTorso.Position) * CFrame.new(0, -10, 0)
+					game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_Start",game.Players[plrToTPTo.Name]})
+
+					game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_End"})
+
+					
+				end  end) end end
+
+
+end
+
+
+commands.unultrappscript = function(sender,arguments)
+uw = true
+
+end
+
+commands.unppscript = function(sender,arguments)
+uw = true
+end
+
+commands.unppsc = function(sender,arguments)
+uw = true
+end
+
+
+
+
+local player = game.Players.LocalPlayer
+player.Chatted:Connect(function(message,recipient)
+	message = string.lower(message)
+
+
+	local splitString = message:split(" ")
+
+	local slashCommand = splitString[1]
+
+	local cmd = slashCommand:split(prefix)
+
+	local cmdName = cmd[2]
+
+	if commands[cmdName] then
+
+		local arguments = {}
+		for i = 2, #splitString, 1 do
+
+			table.insert(arguments,splitString[i])
+		end
+		commands[cmdName](player, arguments)
+	end
+end)
+
+
+
+
+
+
+
+
+
+
 -- Gui to Lua
 -- Version: 3.2
 
