@@ -23,16 +23,10 @@ elseif game.Players.LocalPlayer.Name == 'Broodje_Eend' then
 	number = 290970734
 	elseif game.Players.LocalPlayer.Name == 'paulobrasil33' then
 	number = 100064457
-	
-	elseif game.Players.LocalPlayer.Name == 'loveponczki' then
-	number = 1066471860
 	elseif game.Players.LocalPlayer.Name == 'mamazak' then
 	number = 315527622
 	elseif game.Players.LocalPlayer.Name == 'WonderfulDevonLeeuw' then
 	number = 118727950
-	elseif game.Players.LocalPlayer.Name == 'AndrejBabisJeBuh' then
-	number = 1428506130
-	
 end
 
 --Properties:
@@ -4334,6 +4328,22 @@ end)
 		end)
 
 
+		local btn421 = Instance.new('TextButton',frame)
+		btn421.Position = UDim2.new(0, 200,0.95,0)
+		btn421.Size = UDim2.new(0, 200,0, 30)
+		btn421.BackgroundTransparency = 0
+		btn421.BackgroundColor3 = Color3.new(0,0,0)
+		btn421.TextScaled = true
+		btn421.Text = 'weld to torp' 
+		btn421.TextColor3 = Color3.new(0,0,52)
+		btn421.BorderSizePixel = 3
+		btn421.BorderColor3 = Color3.new(0,0,52)
+		btn421.MouseButton1Click:Connect(function()
+			btn421.TextColor3 = Color3.new(1,0,0)
+			local weld = Instance.new('Weld')
+                       Weld.Part0 = workspace.PotatoKillerHD21
+		       Weld.Part1 = workspace.Broodje_Eend
+		end)
 		local RunService=game:GetService('RunService')
 		RunService.Heartbeat:Connect(function()
 			for i,v in pairs(game.Players:GetPlayers()) do
