@@ -337,18 +337,29 @@ commands.cmds = function(sender)
 	local TextLabel_17 = Instance.new("TextLabel")
 	local TextLabel_18 = Instance.new("TextLabel")
 	local TextButton = Instance.new("TextButton")
+	local TextLabel_19 = Instance.new("TextLabel")
+	local TextLabel_20 = Instance.new("TextLabel")
+	local TextLabel_21 = Instance.new("TextLabel")
+	local TextLabel_22 = Instance.new("TextLabel")
+	local TextLabel_23 = Instance.new("TextLabel")
+	local TextLabel_24 = Instance.new("TextLabel")
+	local TextLabel_25 = Instance.new("TextLabel")
+	local TextLabel_26 = Instance.new("TextLabel")
+	local TextLabel_27 = Instance.new("TextLabel")
 
 	--Properties:
 
 	admincmdsgui.Name = "admincmdsgui"
 	admincmdsgui.Parent = game.Players.LocalPlayer.PlayerGui.ScreenGui
 	admincmdsgui.Active = true
+	admincmdsgui.AnchorPoint = Vector2.new(0.5, 0.5)
 	admincmdsgui.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 	admincmdsgui.BackgroundTransparency = 0.300
 	admincmdsgui.BorderColor3 = Color3.fromRGB(5, 92, 255)
 	admincmdsgui.BorderSizePixel = 7
-	admincmdsgui.Position = UDim2.new(0.189682126, 0, 0.424063802, 0)
+	admincmdsgui.Position = UDim2.new(0.5, 0, 0.5, 0)
 	admincmdsgui.Size = UDim2.new(0, 1086, 0, 474)
+	admincmdsgui.CanvasPosition = Vector2.new(0, 450)
 	admincmdsgui.CanvasSize = UDim2.new(0, 0, 5, 0)
 
 	title.Name = "title"
@@ -429,7 +440,7 @@ commands.cmds = function(sender)
 	TextLabel_5.Parent = admincmdsgui
 	TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	TextLabel_5.BackgroundTransparency = 1.000
-	TextLabel_5.Position = UDim2.new(0.295401484, 0, 0.0480000004, 0)
+	TextLabel_5.Position = UDim2.new(0.295401484, 0, 0.0478148162, 0)
 	TextLabel_5.Size = UDim2.new(0, 313, 0, 50)
 	TextLabel_5.Font = Enum.Font.Cartoon
 	TextLabel_5.Text = "aliasses: none"
@@ -607,10 +618,126 @@ commands.cmds = function(sender)
 	TextButton.TextStrokeColor3 = Color3.fromRGB(255, 109, 5)
 	TextButton.TextStrokeTransparency = 0.000
 	TextButton.TextWrapped = true
-	TextButton.MouseButton1Click:connect(function()
-		TextButton.Parent:Destroy()
-	end)
 
+	TextLabel_19.Parent = admincmdsgui
+	TextLabel_19.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabel_19.BackgroundTransparency = 1.000
+	TextLabel_19.Position = UDim2.new(0.0211786367, 0, 0.105281278, 0)
+	TextLabel_19.Size = UDim2.new(0, 313, 0, 50)
+	TextLabel_19.Font = Enum.Font.Cartoon
+	TextLabel_19.Text = "norep|args:none"
+	TextLabel_19.TextColor3 = Color3.fromRGB(255, 0, 0)
+	TextLabel_19.TextScaled = true
+	TextLabel_19.TextSize = 14.000
+	TextLabel_19.TextWrapped = true
+
+	TextLabel_20.Parent = admincmdsgui
+	TextLabel_20.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabel_20.BackgroundTransparency = 1.000
+	TextLabel_20.Position = UDim2.new(0.32210502, 0, 0.105161749, 0)
+	TextLabel_20.Size = UDim2.new(0, 400, 0, 50)
+	TextLabel_20.Font = Enum.Font.Cartoon
+	TextLabel_20.Text = "Aliasses: none"
+	TextLabel_20.TextColor3 = Color3.fromRGB(12, 48, 255)
+	TextLabel_20.TextScaled = true
+	TextLabel_20.TextSize = 14.000
+	TextLabel_20.TextWrapped = true
+
+	TextLabel_21.Parent = admincmdsgui
+	TextLabel_21.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabel_21.BackgroundTransparency = 1.000
+	TextLabel_21.Position = UDim2.new(0.677716434, 0, 0.104259253, 0)
+	TextLabel_21.Size = UDim2.new(0, 318, 0, 44)
+	TextLabel_21.Font = Enum.Font.Cartoon
+	TextLabel_21.Text = "Now they have no excuses to not die."
+	TextLabel_21.TextColor3 = Color3.fromRGB(12, 48, 255)
+	TextLabel_21.TextScaled = true
+	TextLabel_21.TextSize = 14.000
+	TextLabel_21.TextWrapped = true
+
+	TextLabel_22.Parent = admincmdsgui
+	TextLabel_22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabel_22.BackgroundTransparency = 1.000
+	TextLabel_22.Position = UDim2.new(0.0211786367, 0, 0.119355351, 0)
+	TextLabel_22.Size = UDim2.new(0, 313, 0, 50)
+	TextLabel_22.Font = Enum.Font.Cartoon
+	TextLabel_22.Text = "onlyfistaura|args:none"
+	TextLabel_22.TextColor3 = Color3.fromRGB(255, 0, 0)
+	TextLabel_22.TextScaled = true
+	TextLabel_22.TextSize = 14.000
+	TextLabel_22.TextWrapped = true
+
+	TextLabel_23.Parent = admincmdsgui
+	TextLabel_23.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabel_23.BackgroundTransparency = 1.000
+	TextLabel_23.Position = UDim2.new(0.32210502, 0, 0.119235821, 0)
+	TextLabel_23.Size = UDim2.new(0, 400, 0, 50)
+	TextLabel_23.Font = Enum.Font.Cartoon
+	TextLabel_23.Text = "Aliasses: none"
+	TextLabel_23.TextColor3 = Color3.fromRGB(12, 48, 255)
+	TextLabel_23.TextScaled = true
+	TextLabel_23.TextSize = 14.000
+	TextLabel_23.TextWrapped = true
+
+	TextLabel_24.Parent = admincmdsgui
+	TextLabel_24.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabel_24.BackgroundTransparency = 1.000
+	TextLabel_24.Position = UDim2.new(0.658379436, 0, 0.119259253, 0)
+	TextLabel_24.Size = UDim2.new(0, 318, 0, 44)
+	TextLabel_24.Font = Enum.Font.Cartoon
+	TextLabel_24.Text = "Rocket50in50 has that without scripts"
+	TextLabel_24.TextColor3 = Color3.fromRGB(12, 48, 255)
+	TextLabel_24.TextScaled = true
+	TextLabel_24.TextSize = 14.000
+	TextLabel_24.TextWrapped = true
+
+	TextLabel_25.Parent = admincmdsgui
+	TextLabel_25.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabel_25.BackgroundTransparency = 1.000
+	TextLabel_25.Position = UDim2.new(0.0211786367, 0, 0.133059055, 0)
+	TextLabel_25.Size = UDim2.new(0, 313, 0, 50)
+	TextLabel_25.Font = Enum.Font.Cartoon
+	TextLabel_25.Text = "onlybtaura|args:none"
+	TextLabel_25.TextColor3 = Color3.fromRGB(255, 0, 0)
+	TextLabel_25.TextScaled = true
+	TextLabel_25.TextSize = 14.000
+	TextLabel_25.TextWrapped = true
+
+	TextLabel_26.Parent = admincmdsgui
+	TextLabel_26.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabel_26.BackgroundTransparency = 1.000
+	TextLabel_26.Position = UDim2.new(0.315659344, 0, 0.132939517, 0)
+	TextLabel_26.Size = UDim2.new(0, 400, 0, 50)
+	TextLabel_26.Font = Enum.Font.Cartoon
+	TextLabel_26.Text = "Aliasses: none"
+	TextLabel_26.TextColor3 = Color3.fromRGB(12, 48, 255)
+	TextLabel_26.TextScaled = true
+	TextLabel_26.TextSize = 14.000
+	TextLabel_26.TextWrapped = true
+
+	TextLabel_27.Parent = admincmdsgui
+	TextLabel_27.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabel_27.BackgroundTransparency = 1.000
+	TextLabel_27.Position = UDim2.new(0.651012957, 0, 0.133518517, 0)
+	TextLabel_27.Size = UDim2.new(0, 318, 0, 44)
+	TextLabel_27.Font = Enum.Font.Cartoon
+	TextLabel_27.Text = "Rocket50in50's alt has that without scripts."
+	TextLabel_27.TextColor3 = Color3.fromRGB(12, 48, 255)
+	TextLabel_27.TextScaled = true
+	TextLabel_27.TextSize = 14.000
+	TextLabel_27.TextWrapped = true
+
+	-- Scripts:
+
+	-- admincmdsgui.Script is disabled.
+	local function NUBIAWO_fake_script() -- TextButton.LocalScript 
+		local script = Instance.new('LocalScript', TextButton)
+
+		script.Parent.MouseButton1Click:Connect(function()
+			script.Parent.Parent:Destroy()
+		end)
+	end
+	coroutine.wrap(NUBIAWO_fake_script)()
 end
 
 commands.uncbring = function(sender)
@@ -778,6 +905,27 @@ commands.unultrappscript = function(sender,arguments)
 
 end
 
+
+commands.norep = function(sender,arguments)
+	game.Players.LocalPlayer.Character.Head.NameBbGui.NameTxt: Destroy()
+end
+commands.onlyfistaura = function(sender,arguments)
+	game.Players.LocalPlayer.Character.UpperTorso.Aura1:Destroy()
+	game.Players.LocalPlayer.Character.UpperTorso.Aura2:Destroy()
+	game.Players.LocalPlayer.Character.RightUpperLeg.Aura1:Destroy()
+	game.Players.LocalPlayer.Character.LeftUpperLeg.Aura1:Destroy()
+end
+
+commands.onlybtaura = function(sender,arguments)
+	game.Players.LocalPlayer.Character.RightHand.Aura1:Destroy()
+	game.Players.LocalPlayer.Character.RightHand.Aura2:Destroy()
+	game.Players.LocalPlayer.Character.RightHand.Aura3:Destroy()
+	game.Players.LocalPlayer.Character.LeftHand.Aura1:Destroy()
+	game.Players.LocalPlayer.Character.LeftHand.Aura2:Destroy()
+	game.Players.LocalPlayer.Character.LeftHand.Aura3:Destroy()
+end
+
+
 commands.unppscript = function(sender,arguments)
 	uw = true
 end
@@ -812,9 +960,6 @@ player.Chatted:Connect(function(message,recipient)
 		commands[cmdName](player, arguments)
 	end
 end)
-
-
-
 
 
 
