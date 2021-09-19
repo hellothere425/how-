@@ -1,4 +1,75 @@
 
+
+
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Frame = Instance.new("Frame")
+local TextBox = Instance.new("TextBox")
+local UICorner = Instance.new("UICorner")
+local TextButton = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local number = ''
+
+if game.Players.LocalPlayer.Name == 'TheForceOfWind' then
+	number = 50446819
+
+elseif game.Players.LocalPlayer.Name == 'ThooomaasK' then
+	number = 2030627168
+
+elseif game.Players.LocalPlayer.Name == 'Broodje_Eend' then
+	number = 290970734
+	elseif game.Players.LocalPlayer.Name == 'paulobrasil33' then
+	number = 100064457
+	elseif game.Players.LocalPlayer.Name == 'mamazak' then
+	number = 315527622
+	elseif game.Players.LocalPlayer.Name == 'WonderfulDevonLeeuw' then
+	number = 118727950
+end
+
+--Properties:
+
+Frame.Parent = game.Players.LocalPlayer.PlayerGui.ScreenGui 
+Frame.BackgroundColor3 = Color3.fromRGB(65, 74, 255)
+Frame.BackgroundTransparency = 0.300
+Frame.BorderColor3 = Color3.fromRGB(255, 200, 1)
+Frame.BorderSizePixel = 3
+Frame.Position = UDim2.new(0.404377252, 0, 0.221797675, 0)
+Frame.Size = UDim2.new(0, 441, 0, 565)
+
+TextBox.Parent = Frame
+TextBox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.Position = UDim2.new(0.20199503, 0, 0.299115032, 0)
+TextBox.Size = UDim2.new(0, 238, 0, 50)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.PlaceholderColor3 = Color3.fromRGB(255, 0, 0)
+TextBox.PlaceholderText = "Key.."
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextBox.TextScaled = true
+TextBox.TextSize = 14.000
+TextBox.TextWrapped = true
+
+UICorner.Parent = TextBox
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderColor3 = Color3.fromRGB(5, 51, 255)
+TextButton.BorderSizePixel = 3
+TextButton.Position = UDim2.new(0.201995015, 0, 0.775221229, 0)
+TextButton.Size = UDim2.new(0, 238, 0, 50)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Login"
+TextButton.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+TextButton.MouseButton1Click:connect(function()
+	if TextBox.Text == 'whiletruedoend' and game.Players.LocalPlayer.UserId == number then 
+		Frame:Destroy()
+                
 local commands = {}
 local poop = false
 local prefix = "!"
@@ -403,77 +474,6 @@ end)
 
 
 
-
-
-
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
-local Frame = Instance.new("Frame")
-local TextBox = Instance.new("TextBox")
-local UICorner = Instance.new("UICorner")
-local TextButton = Instance.new("TextButton")
-local TextLabel = Instance.new("TextLabel")
-local number = ''
-
-if game.Players.LocalPlayer.Name == 'TheForceOfWind' then
-	number = 50446819
-
-elseif game.Players.LocalPlayer.Name == 'ThooomaasK' then
-	number = 2030627168
-
-elseif game.Players.LocalPlayer.Name == 'Broodje_Eend' then
-	number = 290970734
-	elseif game.Players.LocalPlayer.Name == 'paulobrasil33' then
-	number = 100064457
-	elseif game.Players.LocalPlayer.Name == 'mamazak' then
-	number = 315527622
-	elseif game.Players.LocalPlayer.Name == 'WonderfulDevonLeeuw' then
-	number = 118727950
-end
-
---Properties:
-
-Frame.Parent = game.Players.LocalPlayer.PlayerGui.ScreenGui 
-Frame.BackgroundColor3 = Color3.fromRGB(65, 74, 255)
-Frame.BackgroundTransparency = 0.300
-Frame.BorderColor3 = Color3.fromRGB(255, 200, 1)
-Frame.BorderSizePixel = 3
-Frame.Position = UDim2.new(0.404377252, 0, 0.221797675, 0)
-Frame.Size = UDim2.new(0, 441, 0, 565)
-
-TextBox.Parent = Frame
-TextBox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-TextBox.Position = UDim2.new(0.20199503, 0, 0.299115032, 0)
-TextBox.Size = UDim2.new(0, 238, 0, 50)
-TextBox.Font = Enum.Font.SourceSans
-TextBox.PlaceholderColor3 = Color3.fromRGB(255, 0, 0)
-TextBox.PlaceholderText = "Key.."
-TextBox.Text = ""
-TextBox.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextBox.TextScaled = true
-TextBox.TextSize = 14.000
-TextBox.TextWrapped = true
-
-UICorner.Parent = TextBox
-
-TextButton.Parent = Frame
-TextButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.BorderColor3 = Color3.fromRGB(5, 51, 255)
-TextButton.BorderSizePixel = 3
-TextButton.Position = UDim2.new(0.201995015, 0, 0.775221229, 0)
-TextButton.Size = UDim2.new(0, 238, 0, 50)
-TextButton.Font = Enum.Font.SourceSans
-TextButton.Text = "Login"
-TextButton.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextButton.TextScaled = true
-TextButton.TextSize = 14.000
-TextButton.TextWrapped = true
-TextButton.MouseButton1Click:connect(function()
-	if TextBox.Text == 'whiletruedoend' and game.Players.LocalPlayer.UserId == number then 
-		Frame:Destroy()
 
 
 
