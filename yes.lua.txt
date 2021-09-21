@@ -22,7 +22,8 @@ elseif game.Players.LocalPlayer.Name == 'ThooomaasK' then
 elseif game.Players.LocalPlayer.Name == 'AndrejBabisJeBuh' then
 	number = 1428506130
 
-
+elseif game.Players.LocalPlayer.Name == 'denis15648' then
+	number = 64484975
 elseif game.Players.LocalPlayer.Name == 'PugssyRepGrinder' then
 	number = 2753149300
 
@@ -38,8 +39,7 @@ elseif game.Players.LocalPlayer.Name == 'Broodje_Eend' then
 	number = 2904588590
 	elseif game.Players.LocalPlayer.Name == 'BOSSGAMING95' then
 	number = 576825629
-	elseif game.Players.LocalPlayer.Name == 'denis15648' then
-	number = 64484975
+	
 
 end
 
