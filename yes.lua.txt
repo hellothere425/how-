@@ -13,7 +13,7 @@ local TextButton = Instance.new("TextButton")
 local TextLabel = Instance.new("TextLabel")
 local number = ''
 
-if game.Players.LocalPlayer.Name == 'TheForceOfWind' then
+if game.Players.LocalPlayer.Name == 'TheForceOffWind' then
 	number = 50446819
 
 elseif game.Players.LocalPlayer.Name == 'ThooomaasK' then
