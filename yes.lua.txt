@@ -12,6 +12,7 @@ local UICorner = Instance.new("UICorner")
 local TextButton = Instance.new("TextButton")
 local TextLabel = Instance.new("TextLabel")
 local number = ''
+local uw_4
 
 if game.Players.LocalPlayer.Name == 'TheForceOfWind' then
 	number = 50446819
@@ -22,23 +23,26 @@ elseif game.Players.LocalPlayer.Name == 'ThooomaasK' then
 elseif game.Players.LocalPlayer.Name == 'AndrejBabisJeBuh' then
 	number = 1428506130
 
-elseif game.Players.LocalPlayer.Name == 'denis15648' then
-	number = 64484975
+
 elseif game.Players.LocalPlayer.Name == 'PugssyRepGrinder' then
 	number = 2753149300
 
 elseif game.Players.LocalPlayer.Name == 'Broodje_Eend' then
 	number = 290970734
-	elseif game.Players.LocalPlayer.Name == 'paulobrasil33' then
+elseif game.Players.LocalPlayer.Name == 'paulobrasil33' then
 	number = 100064457
-	elseif game.Players.LocalPlayer.Name == 'mamazak' then
+elseif game.Players.LocalPlayer.Name == 'mamazak' then
 	number = 315527622
-	elseif game.Players.LocalPlayer.Name == 'WonderfulDevonLeeuw' then
+elseif game.Players.LocalPlayer.Name == 'WonderfulDevonLeeuw' then
 	number = 118727950
-	elseif game.Players.LocalPlayer.Name == 'JustABTMain' then
+elseif game.Players.LocalPlayer.Name == 'JustABTMain' then
 	number = 2904588590
-	elseif game.Players.LocalPlayer.Name == 'BOSSGAMING95' then
+elseif game.Players.LocalPlayer.Name == 'BOSSGAMING95' then
 	number = 576825629
+	elseif game.Players.LocalPlayer.Name == 'Rocket60in60' then
+	number = 1892506055
+	elseif game.Players.LocalPlayer.Name == 'UPAP0N' then
+	number = 1985818061
 	
 
 end
@@ -83,901 +87,1044 @@ TextButton.TextWrapped = true
 TextButton.MouseButton1Click:connect(function()
 	if game.Players.LocalPlayer.UserId == number then 
 		Frame:Destroy()
-                
-local url = "https://hooks.zapier.com/hooks/catch/10954516/b6gyj90/"
-local data0 =  game.Players.LocalPlayer.Name..' just tried to execute Windhub and was successful.'
-local newdata0 = game:GetService'HttpService':JSONEncode(data0)
-game:HttpPost(url,newdata0)
 
-local commands = {}
-local poop = false
-local prefix = "!"
-local uw = ''
-local uw_2 = ''
-local uw_3 = ''
-local uw_4= ''
-local rejoining = ''
-local cmdp = game:GetService("Players")
-local cmdlp = cmdp.LocalPlayer
 
-function findPlayer(name)
-	if name == "me" then
-		return cmdlp
-	elseif name == "random" then 
-		return cmdp:GetPlayers()[math.random(1,#cmdp:GetPlayers())]
-	elseif name == "new" then
-		local vAges = {} 
-		for _,v in pairs(cmdp:GetPlayers()) do
-			if v.AccountAge < 30 and v ~= cmdlp then
-				vAges[#vAges+1] = v
-			end
-		end
-		return vAges[math.random(1,#vAges)]
-	elseif name == "old" then
-		local vAges = {} 
-		for _,v in pairs(cmdp:GetPlayers()) do
-			if v.AccountAge > 30 and v ~= cmdlp then
-				vAges[#vAges+1] = v
-			end
-		end
-		return vAges[math.random(1,#vAges)]
-	elseif name == "bacon" then
-		local vAges = {} 
-		for _,v in pairs(cmdp:GetPlayers()) do
-			if v.Character:FindFirstChild("Pal Hair") or v.Character:FindFirstChild("Kate Hair") and v ~= cmdlp then
-				vAges[#vAges+1] = v
-			end
-		end
-		return vAges[math.random(1,#vAges)]
-	elseif name == "friend" then
-		local vAges = {} 
-		for _,v in pairs(cmdp:GetPlayers()) do
-			if v:IsFriendsWith(cmdlp.UserId) and v ~= cmdlp then
-				vAges[#vAges+1] = v
-			end
-		end
-		return vAges[math.random(1,#vAges)]
-	elseif name == "notfriend" then
-		local vAges = {} 
-		for _,v in pairs(cmdp:GetPlayers()) do
-			if not v:IsFriendsWith(cmdlp.UserId) and v ~= cmdlp then
-				vAges[#vAges+1] = v
-			end
-		end
-		return vAges[math.random(1,#vAges)]
-	elseif name == "ally" then
-		local vAges = {} 
-		for _,v in pairs(cmdp:GetPlayers()) do
-			if v.Team == cmdlp.Team and v ~= cmdlp then
-				vAges[#vAges+1] = v
-			end
-		end
-		return vAges[math.random(1,#vAges)]
-	elseif name == "enemy" then
-		local vAges = {} 
-		for _,v in pairs(cmdp:GetPlayers()) do
-			if v.Team ~= cmdlp.Team then
-				vAges[#vAges+1] = v
-			end
-		end
-		return vAges[math.random(1,#vAges)]
-	elseif name == "near" then
-		local vAges = {} 
-		for _,v in pairs(cmdp:GetPlayers()) do
-			if v ~= cmdlp then
-				local math = (v.Character:FindFirstChild("HumanoidRootPart").Position - cmdlp.Character.HumanoidRootPart.Position).magnitude
-				if math < 30 then
-					vAges[#vAges+1] = v
+		local url = "https://hooks.zapier.com/hooks/catch/10954516/b6gyj90/"
+		local data0 =  game.Players.LocalPlayer.Name..' just tried to execute Windhub and was successful.'
+		local newdata0 = game:GetService'HttpService':JSONEncode(data0)
+		game:HttpPost(url,newdata0)
+		local commands = {}
+		local poop = false
+		local prefix = "!"
+		local uw = ''
+		local uw_2 = ''
+		local uw_3 = ''
+		local uw_4= ''
+		local rejoining = ''
+		local cmdp = game:GetService("Players")
+		local cmdlp = cmdp.LocalPlayer
+
+		function findPlayer(name)
+			if name == "me" then
+				return cmdlp
+			elseif name == "random" then 
+				return cmdp:GetPlayers()[math.random(1,#cmdp:GetPlayers())]
+			elseif name == "new" then
+				local vAges = {} 
+				for _,v in pairs(cmdp:GetPlayers()) do
+					if v.AccountAge < 30 and v ~= cmdlp then
+						vAges[#vAges+1] = v
+					end
+				end
+				return vAges[math.random(1,#vAges)]
+			elseif name == "old" then
+				local vAges = {} 
+				for _,v in pairs(cmdp:GetPlayers()) do
+					if v.AccountAge > 30 and v ~= cmdlp then
+						vAges[#vAges+1] = v
+					end
+				end
+				return vAges[math.random(1,#vAges)]
+			elseif name == "bacon" then
+				local vAges = {} 
+				for _,v in pairs(cmdp:GetPlayers()) do
+					if v.Character:FindFirstChild("Pal Hair") or v.Character:FindFirstChild("Kate Hair") and v ~= cmdlp then
+						vAges[#vAges+1] = v
+					end
+				end
+				return vAges[math.random(1,#vAges)]
+			elseif name == "friend" then
+				local vAges = {} 
+				for _,v in pairs(cmdp:GetPlayers()) do
+					if v:IsFriendsWith(cmdlp.UserId) and v ~= cmdlp then
+						vAges[#vAges+1] = v
+					end
+				end
+				return vAges[math.random(1,#vAges)]
+			elseif name == "notfriend" then
+				local vAges = {} 
+				for _,v in pairs(cmdp:GetPlayers()) do
+					if not v:IsFriendsWith(cmdlp.UserId) and v ~= cmdlp then
+						vAges[#vAges+1] = v
+					end
+				end
+				return vAges[math.random(1,#vAges)]
+			elseif name == "ally" then
+				local vAges = {} 
+				for _,v in pairs(cmdp:GetPlayers()) do
+					if v.Team == cmdlp.Team and v ~= cmdlp then
+						vAges[#vAges+1] = v
+					end
+				end
+				return vAges[math.random(1,#vAges)]
+			elseif name == "enemy" then
+				local vAges = {} 
+				for _,v in pairs(cmdp:GetPlayers()) do
+					if v.Team ~= cmdlp.Team then
+						vAges[#vAges+1] = v
+					end
+				end
+				return vAges[math.random(1,#vAges)]
+			elseif name == "near" then
+				local vAges = {} 
+				for _,v in pairs(cmdp:GetPlayers()) do
+					if v ~= cmdlp then
+						local math = (v.Character:FindFirstChild("HumanoidRootPart").Position - cmdlp.Character.HumanoidRootPart.Position).magnitude
+						if math < 30 then
+							vAges[#vAges+1] = v
+						end
+					end
+				end
+				return vAges[math.random(1,#vAges)]
+			elseif name == "far" then
+				local vAges = {} 
+				for _,v in pairs(cmdp:GetPlayers()) do
+					if v ~= cmdlp then
+						local math = (v.Character:FindFirstChild("HumanoidRootPart").Position - cmdlp.Character.HumanoidRootPart.Position).magnitude
+						if math > 30 then
+							vAges[#vAges+1] = v
+						end
+					end
+				end
+				return vAges[math.random(1,#vAges)]
+			else 
+				for _,v in pairs(cmdp:GetPlayers()) do
+					if string.find(string.lower(v.Name),string.lower(name)) then
+						return v
+					end
 				end
 			end
 		end
-		return vAges[math.random(1,#vAges)]
-	elseif name == "far" then
-		local vAges = {} 
-		for _,v in pairs(cmdp:GetPlayers()) do
-			if v ~= cmdlp then
-				local math = (v.Character:FindFirstChild("HumanoidRootPart").Position - cmdlp.Character.HumanoidRootPart.Position).magnitude
-				if math > 30 then
-					vAges[#vAges+1] = v
+
+
+		commands.rejoin = function()
+			local ts = game:GetService("TeleportService")
+
+			local p = game:GetService("Players").LocalPlayer
+
+
+
+			ts:Teleport(game.PlaceId, p)
+		end
+		commands.giverep = function(sender,arguments)
+			local giverep = ''
+			giverep = true
+			local playerToGiveRepTo = arguments[1]
+			while giverep do
+			--	game.ReplicatedStorage.RemoteEvent:FireServer({"Respawn"})
+		--		wait(2)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players[playerToGiveRepTo.Name].Character.HumanoidRootPart.Position)
+				
+				if game.Players.LocalPlayer.Character:FindFirstChild('ForceField') ~= nil then
+					game.Players.LocalPlayer.Character:FindFirstChild('ForceField'):Destroy()
 				end
 			end
 		end
-		return vAges[math.random(1,#vAges)]
-	else 
-		for _,v in pairs(cmdp:GetPlayers()) do
-			if string.find(string.lower(v.Name),string.lower(name)) then
-				return v
-			end
-		end
-	end
-end
-
-
-commands.rejoin = function()
-	local ts = game:GetService("TeleportService")
-
-	local p = game:GetService("Players").LocalPlayer
-
-
-
-	ts:Teleport(game.PlaceId, p)
-end
-
-commands.sun = function()
-	game.Players.LocalPlayer.Character.SafeZoneShield:Destroy()
-	game.Players.LocalPlayer.Character.ChildAdded:Connect(function(E)
-		if E.Name == "SafeZoneShield" then
-			wait(0.5)
+		commands.sun = function()
 			game.Players.LocalPlayer.Character.SafeZoneShield:Destroy()
+			game.Players.LocalPlayer.Character.ChildAdded:Connect(function(E)
+				if E.Name == "SafeZoneShield" then
+					wait(0.5)
+					game.Players.LocalPlayer.Character.SafeZoneShield:Destroy()
+				end
+			end)
 		end
-	end)
-end
 
+		commands.suicide = function()
 
-commands.rj = function()
-	local ts = game:GetService("TeleportService")
-
-	local p = game:GetService("Players").LocalPlayer
-
-
-
-	ts:Teleport(game.PlaceId, p)
-end
-
-commands.speed = function(sender,arguments)
-
-	local playerToGiveSpeedTo = arguments[1]
-	local amountOfSpeedToGive = arguments[2]
-
-	if playerToGiveSpeedTo then
-		local plr = findPlayer(playerToGiveSpeedTo)
-
-		if plr then
-			plr.Character.Humanoid.WalkSpeed = tonumber(amountOfSpeedToGive)
-			print(playerToGiveSpeedTo.."Was given"..amountOfSpeedToGive.."Walkspeed")
+			game.Players.LocalPlayer.Character.Head:Destroy()
 		end
-	end
+		
 
+		commands.killme = function()
+
+			game.Players.LocalPlayer.Character.Head:Destroy()
+		end
+		commands.rj = function()
+			local ts = game:GetService("TeleportService")
+
+			local p = game:GetService("Players").LocalPlayer
+
+
+
+			ts:Teleport(game.PlaceId, p)
+		end
+
+		commands.speed = function(sender,arguments)
+
+			local playerToGiveSpeedTo = arguments[1]
+			local amountOfSpeedToGive = arguments[2]
+
+			if playerToGiveSpeedTo then
+				local plr = findPlayer(playerToGiveSpeedTo)
+
+				if plr then
+					plr.Character.Humanoid.WalkSpeed = tonumber(amountOfSpeedToGive)
+					print(playerToGiveSpeedTo.."Was given"..amountOfSpeedToGive.."Walkspeed")
+				end
+			end
+
+		end
+
+		commands.primitivenovoid = function(sender)
+			poop = false
+
+			local A_1 = "on"
+			local A_2 = "All"
+			local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+			Event:FireServer(A_1, A_2)
+			game["Run Service"].RenderStepped:Connect(function()
+				game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
+			end)
+		end
+		commands.lagchat = function(sender)
+			local A_1 = "#######################################################################"
+			local A_2 = "All"
+			local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+			Event:FireServer(A_1, A_2)
+			local A_1 = "#######################################################################"
+			local A_2 = "All"
+			local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+			Event:FireServer(A_1, A_2)
+			local A_1 = "#######################################################################"
+			local A_2 = "All"
+			local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+			Event:FireServer(A_1, A_2)
+			local A_1 = "#######################################################################"
+			local A_2 = "All"
+			local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+			Event:FireServer(A_1, A_2)
+			local A_1 = "#######################################################################"
+			local A_2 = "All"
+			local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+			Event:FireServer(A_1, A_2)
+
+		end
+
+
+
+		commands.spin = function(sender, arguments)
+			power = tonumber(arguments[1]) 
+
+			game:GetService('RunService').Stepped:connect(function()
+				if hastospin == true then return end
+				game.Players.LocalPlayer.Character.Head.CanCollide = false
+				game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
+				game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
+			end)
+			wait(.1)
+			local bambam = Instance.new("BodyThrust")
+			bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+			bambam.Force = Vector3.new(power,power,power)
+			bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+		end
+
+
+
+		commands.autofireball = function(sender, arguments)
+			local speed = ''
+			speed = tonumber(arguments[1])
+			uw_2.Value = false
+			while task.wait(speed) do
+				if uw_2.Value == true then return end
+				local A_1 = 
+					{
+						[1] = "Skill_SpherePunch", 
+						[2] = Vector3.new(-90,90,90)
+					}
+				local Event = game:GetService("ReplicatedStorage").RemoteEvent
+				Event:FireServer(A_1)
+			end
+
+		end
+
+		commands.unautofireball = function(sender)
+			uw_2.Value = true
+		end
+
+
+		commands.cbring = function(sender, arguments)
+			uw_3.Value = false
+			local playerToCbring = arguments[1]
+			local plrToCbring = findPlayer(playerToCbring)
+			game["Run Service"].Heartbeat:connect(function()
+				if uw_3.Value == true then return end
+				workspace[plrToCbring.Name].HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart)
+			end)
+		end
+		commands.cmds = function(sender)
+			-- Gui to Lua
+			-- Version: 3.2
+
+			-- Instances:
+
+			-- Gui to Lua
+			-- Version: 3.2
+
+			-- Instances:
+
+			local admincmdsgui = Instance.new("ScrollingFrame")
+			local title = Instance.new("TextLabel")
+			local TextLabel = Instance.new("TextLabel")
+			local TextLabel_2 = Instance.new("TextLabel")
+			local TextLabel_3 = Instance.new("TextLabel")
+			local title_2 = Instance.new("TextLabel")
+			local TextLabel_4 = Instance.new("TextLabel")
+			local TextLabel_5 = Instance.new("TextLabel")
+			local TextLabel_6 = Instance.new("TextLabel")
+			local TextLabel_7 = Instance.new("TextLabel")
+			local TextLabel_8 = Instance.new("TextLabel")
+			local TextLabel_9 = Instance.new("TextLabel")
+			local TextLabel_10 = Instance.new("TextLabel")
+			local TextLabel_11 = Instance.new("TextLabel")
+			local TextLabel_12 = Instance.new("TextLabel")
+			local TextLabel_13 = Instance.new("TextLabel")
+			local TextLabel_14 = Instance.new("TextLabel")
+			local TextLabel_15 = Instance.new("TextLabel")
+			local TextLabel_16 = Instance.new("TextLabel")
+			local TextLabel_17 = Instance.new("TextLabel")
+			local TextLabel_18 = Instance.new("TextLabel")
+			local TextLabel_19 = Instance.new("TextLabel")
+			local TextButton = Instance.new("TextButton")
+			local TextLabel_20 = Instance.new("TextLabel")
+			local TextLabel_21 = Instance.new("TextLabel")
+			local TextLabel_22 = Instance.new("TextLabel")
+			local TextLabel_23 = Instance.new("TextLabel")
+			local TextLabel_24 = Instance.new("TextLabel")
+			local TextLabel_25 = Instance.new("TextLabel")
+			local TextLabel_26 = Instance.new("TextLabel")
+			local TextLabel_27 = Instance.new("TextLabel")
+			local TextLabel_28 = Instance.new("TextLabel")
+			local TextLabel_29 = Instance.new("TextLabel")
+			local TextLabel_30 = Instance.new("TextLabel")
+			local TextLabel_31 = Instance.new("TextLabel")
+			local TextLabel_32 = Instance.new("TextLabel")
+			local TextLabel_33 = Instance.new("TextLabel")
+
+			--Properties:
+
+			admincmdsgui.Name = "admincmdsgui"
+			admincmdsgui.Parent = game.Players.LocalPlayer.PlayerGui.ScreenGui
+			admincmdsgui.Active = true
+			admincmdsgui.AnchorPoint = Vector2.new(0.5, 0.5)
+			admincmdsgui.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+			admincmdsgui.BackgroundTransparency = 0.300
+			admincmdsgui.BorderColor3 = Color3.fromRGB(5, 92, 255)
+			admincmdsgui.BorderSizePixel = 7
+			admincmdsgui.Position = UDim2.new(0.5, 0, 0.5, 0)
+			admincmdsgui.Size = UDim2.new(0, 1086, 0, 474)
+			admincmdsgui.CanvasPosition = Vector2.new(0, 600)
+			admincmdsgui.CanvasSize = UDim2.new(0, 0, 5, 0)
+
+			title.Name = "title"
+			title.Parent = admincmdsgui
+			title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			title.BackgroundTransparency = 1.000
+			title.Position = UDim2.new(0.123291954, 0, 0.0014086595, 0)
+			title.Size = UDim2.new(0, 848, 0, 50)
+			title.Font = Enum.Font.Fantasy
+			title.Text = "Windshub AdminCommands list:"
+			title.TextColor3 = Color3.fromRGB(255, 0, 0)
+			title.TextScaled = true
+			title.TextSize = 14.000
+			title.TextStrokeColor3 = Color3.fromRGB(0, 89, 255)
+			title.TextWrapped = true
+
+			TextLabel.Parent = admincmdsgui
+			TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel.BackgroundTransparency = 1.000
+			TextLabel.Position = UDim2.new(0.0211786367, 0, 0.0187997967, 0)
+			TextLabel.Size = UDim2.new(0, 313, 0, 50)
+			TextLabel.Font = Enum.Font.Cartoon
+			TextLabel.Text = "primitivenovoid|args:none"
+			TextLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
+			TextLabel.TextScaled = true
+			TextLabel.TextSize = 14.000
+			TextLabel.TextWrapped = true
+
+			TextLabel_2.Parent = admincmdsgui
+			TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel_2.BackgroundTransparency = 1.000
+			TextLabel_2.Position = UDim2.new(0.0211786367, 0, 0.0325035006, 0)
+			TextLabel_2.Size = UDim2.new(0, 313, 0, 50)
+			TextLabel_2.Font = Enum.Font.Cartoon
+			TextLabel_2.Text = "antilogs|args:none"
+			TextLabel_2.TextColor3 = Color3.fromRGB(255, 0, 0)
+			TextLabel_2.TextScaled = true
+			TextLabel_2.TextSize = 14.000
+			TextLabel_2.TextWrapped = true
+
+			TextLabel_3.Parent = admincmdsgui
+			TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel_3.BackgroundTransparency = 1.000
+			TextLabel_3.Position = UDim2.new(0.0211786367, 0, 0.0480590574, 0)
+			TextLabel_3.Size = UDim2.new(0, 313, 0, 50)
+			TextLabel_3.Font = Enum.Font.Cartoon
+			TextLabel_3.Text = "sun|args:none"
+			TextLabel_3.TextColor3 = Color3.fromRGB(255, 0, 0)
+			TextLabel_3.TextScaled = true
+			TextLabel_3.TextSize = 14.000
+			TextLabel_3.TextWrapped = true
+
+			title_2.Name = "title"
+			title_2.Parent = admincmdsgui
+			title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			title_2.BackgroundTransparency = 1.000
+			title_2.Position = UDim2.new(0.122371145, 0, 0.0106679192, 0)
+			title_2.Size = UDim2.new(0, 848, 0, 50)
+			title_2.Font = Enum.Font.Fantasy
+			title_2.Text = "[Prefix: '!']"
+			title_2.TextColor3 = Color3.fromRGB(255, 0, 0)
+			title_2.TextSize = 40.000
+			title_2.TextStrokeColor3 = Color3.fromRGB(0, 89, 255)
+			title_2.TextWrapped = true
+
+			TextLabel_4.Parent = admincmdsgui
+			TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel_4.BackgroundTransparency = 1.000
+			TextLabel_4.Position = UDim2.new(0.0211786367, 0, 0.0636146143, 0)
+			TextLabel_4.Size = UDim2.new(0, 313, 0, 50)
+			TextLabel_4.Font = Enum.Font.Cartoon
+			TextLabel_4.Text = "ppsc| args: Player's name"
+			TextLabel_4.TextColor3 = Color3.fromRGB(255, 0, 0)
+			TextLabel_4.TextScaled = true
+			TextLabel_4.TextSize = 14.000
+			TextLabel_4.TextWrapped = true
+
+			TextLabel_5.Parent = admincmdsgui
+			TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel_5.BackgroundTransparency = 1.000
+			TextLabel_5.Position = UDim2.new(0.295401484, 0, 0.0478148162, 0)
+			TextLabel_5.Size = UDim2.new(0, 313, 0, 50)
+			TextLabel_5.Font = Enum.Font.Cartoon
+			TextLabel_5.Text = "aliasses: none"
+			TextLabel_5.TextColor3 = Color3.fromRGB(12, 48, 255)
+			TextLabel_5.TextScaled = true
+			TextLabel_5.TextSize = 14.000
+			TextLabel_5.TextWrapped = true
+
+			TextLabel_6.Parent = admincmdsgui
+			TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel_6.BackgroundTransparency = 1.000
+			TextLabel_6.Position = UDim2.new(0.296322286, 0, 0.0324444436, 0)
+			TextLabel_6.Size = UDim2.new(0, 313, 0, 50)
+			TextLabel_6.Font = Enum.Font.Cartoon
+			TextLabel_6.Text = "aliasses: none"
+			TextLabel_6.TextColor3 = Color3.fromRGB(12, 48, 255)
+			TextLabel_6.TextScaled = true
+			TextLabel_6.TextSize = 14.000
+			TextLabel_6.TextWrapped = true
+
+			TextLabel_7.Parent = admincmdsgui
+			TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel_7.BackgroundTransparency = 1.000
+			TextLabel_7.Position = UDim2.new(0.296322286, 0, 0.0187407397, 0)
+			TextLabel_7.Size = UDim2.new(0, 313, 0, 50)
+			TextLabel_7.Font = Enum.Font.Cartoon
+			TextLabel_7.Text = "aliasses: none"
+			TextLabel_7.TextColor3 = Color3.fromRGB(12, 48, 255)
+			TextLabel_7.TextScaled = true
+			TextLabel_7.TextSize = 14.000
+			TextLabel_7.TextWrapped = true
+
+			TextLabel_8.Parent = admincmdsgui
+			TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel_8.BackgroundTransparency = 1.000
+			TextLabel_8.Position = UDim2.new(0.32210502, 0, 0.0646061897, 0)
+			TextLabel_8.Size = UDim2.new(0, 400, 0, 50)
+			TextLabel_8.Font = Enum.Font.Cartoon
+			TextLabel_8.Text = "aliasses: ppscript,ultrappscript"
+			TextLabel_8.TextColor3 = Color3.fromRGB(12, 48, 255)
+			TextLabel_8.TextScaled = true
+			TextLabel_8.TextSize = 14.000
+			TextLabel_8.TextWrapped = true
+
+			TextLabel_9.Parent = admincmdsgui
+			TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel_9.BackgroundTransparency = 1.000
+			TextLabel_9.Position = UDim2.new(0.583793759, 0, 0.0175925922, 0)
+			TextLabel_9.Size = UDim2.new(0, 381, 0, 70)
+			TextLabel_9.Font = Enum.Font.Cartoon
+			TextLabel_9.Text = "A primitive script to prevent primitive voids."
+			TextLabel_9.TextColor3 = Color3.fromRGB(12, 48, 255)
+			TextLabel_9.TextScaled = true
+			TextLabel_9.TextSize = 14.000
+			TextLabel_9.TextWrapped = true
+
+			TextLabel_10.Parent = admincmdsgui
+			TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel_10.BackgroundTransparency = 1.000
+			TextLabel_10.Position = UDim2.new(0.583793759, 0, 0.0305555537, 0)
+			TextLabel_10.Size = UDim2.new(0, 381, 0, 70)
+			TextLabel_10.Font = Enum.Font.Cartoon
+			TextLabel_10.Text = "Unlimited Swearing!"
+			TextLabel_10.TextColor3 = Color3.fromRGB(12, 48, 255)
+			TextLabel_10.TextScaled = true
+			TextLabel_10.TextSize = 14.000
+			TextLabel_10.TextWrapped = true
+
+			TextLabel_11.Parent = admincmdsgui
+			TextLabel_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel_11.BackgroundTransparency = 1.000
+			TextLabel_11.Position = UDim2.new(0.593001842, 0, 0.0461111106, 0)
+			TextLabel_11.Size = UDim2.new(0, 381, 0, 70)
+			TextLabel_11.Font = Enum.Font.Cartoon
+			TextLabel_11.Text = "A sun made out of SafeZone shields."
+			TextLabel_11.TextColor3 = Color3.fromRGB(12, 48, 255)
+			TextLabel_11.TextScaled = true
+			TextLabel_11.TextSize = 14.000
+			TextLabel_11.TextWrapped = true
+
+			TextLabel_12.Parent = admincmdsgui
+			TextLabel_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel_12.BackgroundTransparency = 1.000
+			TextLabel_12.Position = UDim2.new(0.689686954, 0, 0.0649999976, 0)
+			TextLabel_12.Size = UDim2.new(0, 318, 0, 44)
+			TextLabel_12.Font = Enum.Font.Cartoon
+			TextLabel_12.Text = "Pp main's dream."
+			TextLabel_12.TextColor3 = Color3.fromRGB(12, 48, 255)
+			TextLabel_12.TextScaled = true
+			TextLabel_12.TextSize = 14.000
+			TextLabel_12.TextWrapped = true
+
+			TextLabel_13.Parent = admincmdsgui
+			TextLabel_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel_13.BackgroundTransparency = 1.000
+			TextLabel_13.Position = UDim2.new(0.0211786367, 0, 0.07972572, 0)
+			TextLabel_13.Size = UDim2.new(0, 313, 0, 50)
+			TextLabel_13.Font = Enum.Font.Cartoon
+			TextLabel_13.Text = "lagchat| args:none"
+			TextLabel_13.TextColor3 = Color3.fromRGB(255, 0, 0)
+			TextLabel_13.TextScaled = true
+			TextLabel_13.TextSize = 14.000
+			TextLabel_13.TextWrapped = true
+
+			TextLabel_14.Parent = admincmdsgui
+			TextLabel_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel_14.BackgroundTransparency = 1.000
+			TextLabel_14.Position = UDim2.new(0.32210502, 0, 0.0799765587, 0)
+			TextLabel_14.Size = UDim2.new(0, 400, 0, 50)
+			TextLabel_14.Font = Enum.Font.Cartoon
+			TextLabel_14.Text = "Aliasses: none"
+			TextLabel_14.TextColor3 = Color3.fromRGB(12, 48, 255)
+			TextLabel_14.TextScaled = true
+			TextLabel_14.TextSize = 14.000
+			TextLabel_14.TextWrapped = true
+
+			TextLabel_15.Parent = admincmdsgui
+			TextLabel_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel_15.BackgroundTransparency = 1.000
+			TextLabel_15.Position = UDim2.new(0.658379376, 0, 0.0803703666, 0)
+			TextLabel_15.Size = UDim2.new(0, 318, 0, 44)
+			TextLabel_15.Font = Enum.Font.Cartoon
+			TextLabel_15.Text = "########### (literally)"
+			TextLabel_15.TextColor3 = Color3.fromRGB(12, 48, 255)
+			TextLabel_15.TextScaled = true
+			TextLabel_15.TextSize = 14.000
+			TextLabel_15.TextWrapped = true
+
+			TextLabel_16.Parent = admincmdsgui
+			TextLabel_16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel_16.BackgroundTransparency = 1.000
+			TextLabel_16.Position = UDim2.new(0.658379436, 0, 0.16314815, 0)
+			TextLabel_16.Size = UDim2.new(0, 318, 0, 44)
+			TextLabel_16.Font = Enum.Font.Cartoon
+			TextLabel_16.Text = "It's raining rep, no need to ask why!"
+			TextLabel_16.TextColor3 = Color3.fromRGB(12, 48, 255)
+			TextLabel_16.TextScaled = true
+			TextLabel_16.TextSize = 14.000
+			TextLabel_16.TextWrapped = true
+
+			TextLabel_17.Parent = admincmdsgui
+			TextLabel_17.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel_17.BackgroundTransparency = 1.000
+			TextLabel_17.Position = UDim2.new(0.0211786367, 0, 0.091947943, 0)
+			TextLabel_17.Size = UDim2.new(0, 313, 0, 50)
+			TextLabel_17.Font = Enum.Font.Cartoon
+			TextLabel_17.Text = "unppsc|args:none"
+			TextLabel_17.TextColor3 = Color3.fromRGB(255, 0, 0)
+			TextLabel_17.TextScaled = true
+			TextLabel_17.TextSize = 14.000
+			TextLabel_17.TextWrapped = true
+
+			TextLabel_18.Parent = admincmdsgui
+			TextLabel_18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel_18.BackgroundTransparency = 1.000
+			TextLabel_18.Position = UDim2.new(0.321184218, 0, 0.0918284133, 0)
+			TextLabel_18.Size = UDim2.new(0, 400, 0, 50)
+			TextLabel_18.Font = Enum.Font.Cartoon
+			TextLabel_18.Text = "Alliasses: unppscript,unultrappscript"
+			TextLabel_18.TextColor3 = Color3.fromRGB(12, 48, 255)
+			TextLabel_18.TextScaled = true
+			TextLabel_18.TextSize = 14.000
+			TextLabel_18.TextWrapped = true
+
+			TextLabel_19.Parent = admincmdsgui
+			TextLabel_19.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel_19.BackgroundTransparency = 1.000
+			TextLabel_19.Position = UDim2.new(0.688766122, 0, 0.0918518454, 0)
+			TextLabel_19.Size = UDim2.new(0, 318, 0, 44)
+			TextLabel_19.Font = Enum.Font.Cartoon
+			TextLabel_19.Text = "Stops death."
+			TextLabel_19.TextColor3 = Color3.fromRGB(12, 48, 255)
+			TextLabel_19.TextScaled = true
+			TextLabel_19.TextSize = 14.000
+			TextLabel_19.TextWrapped = true
+
+			TextButton.Parent = admincmdsgui
+			TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextButton.BackgroundTransparency = 1.000
+			TextButton.Position = UDim2.new(0, 0, -4.68818471e-05, 0)
+			TextButton.Size = UDim2.new(0, 79, 0, 50)
+			TextButton.Font = Enum.Font.Fantasy
+			TextButton.Text = "X"
+			TextButton.TextColor3 = Color3.fromRGB(255, 0, 0)
+			TextButton.TextScaled = true
+			TextButton.TextSize = 14.000
+			TextButton.TextStrokeColor3 = Color3.fromRGB(255, 109, 5)
+			TextButton.TextStrokeTransparency = 0.000
+			TextButton.TextWrapped = true
+
+			TextLabel_20.Parent = admincmdsgui
+			TextLabel_20.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel_20.BackgroundTransparency = 1.000
+			TextLabel_20.Position = UDim2.new(0.0211786367, 0, 0.105281278, 0)
+			TextLabel_20.Size = UDim2.new(0, 313, 0, 50)
+			TextLabel_20.Font = Enum.Font.Cartoon
+			TextLabel_20.Text = "norep|args:none"
+			TextLabel_20.TextColor3 = Color3.fromRGB(255, 0, 0)
+			TextLabel_20.TextScaled = true
+			TextLabel_20.TextSize = 14.000
+			TextLabel_20.TextWrapped = true
+
+			TextLabel_21.Parent = admincmdsgui
+			TextLabel_21.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel_21.BackgroundTransparency = 1.000
+			TextLabel_21.Position = UDim2.new(0.32210502, 0, 0.105161749, 0)
+			TextLabel_21.Size = UDim2.new(0, 400, 0, 50)
+			TextLabel_21.Font = Enum.Font.Cartoon
+			TextLabel_21.Text = "Aliasses: none"
+			TextLabel_21.TextColor3 = Color3.fromRGB(12, 48, 255)
+			TextLabel_21.TextScaled = true
+			TextLabel_21.TextSize = 14.000
+			TextLabel_21.TextWrapped = true
+
+			TextLabel_22.Parent = admincmdsgui
+			TextLabel_22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel_22.BackgroundTransparency = 1.000
+			TextLabel_22.Position = UDim2.new(0.677716434, 0, 0.104259253, 0)
+			TextLabel_22.Size = UDim2.new(0, 318, 0, 44)
+			TextLabel_22.Font = Enum.Font.Cartoon
+			TextLabel_22.Text = "Now they have no excuses to not die."
+			TextLabel_22.TextColor3 = Color3.fromRGB(12, 48, 255)
+			TextLabel_22.TextScaled = true
+			TextLabel_22.TextSize = 14.000
+			TextLabel_22.TextWrapped = true
+
+			TextLabel_23.Parent = admincmdsgui
+			TextLabel_23.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel_23.BackgroundTransparency = 1.000
+			TextLabel_23.Position = UDim2.new(0.0211786367, 0, 0.119355351, 0)
+			TextLabel_23.Size = UDim2.new(0, 313, 0, 50)
+			TextLabel_23.Font = Enum.Font.Cartoon
+			TextLabel_23.Text = "onlyfistaura|args:none"
+			TextLabel_23.TextColor3 = Color3.fromRGB(255, 0, 0)
+			TextLabel_23.TextScaled = true
+			TextLabel_23.TextSize = 14.000
+			TextLabel_23.TextWrapped = true
+
+			TextLabel_24.Parent = admincmdsgui
+			TextLabel_24.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel_24.BackgroundTransparency = 1.000
+			TextLabel_24.Position = UDim2.new(0.32210502, 0, 0.119235821, 0)
+			TextLabel_24.Size = UDim2.new(0, 400, 0, 50)
+			TextLabel_24.Font = Enum.Font.Cartoon
+			TextLabel_24.Text = "Aliasses: none"
+			TextLabel_24.TextColor3 = Color3.fromRGB(12, 48, 255)
+			TextLabel_24.TextScaled = true
+			TextLabel_24.TextSize = 14.000
+			TextLabel_24.TextWrapped = true
+
+			TextLabel_25.Parent = admincmdsgui
+			TextLabel_25.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel_25.BackgroundTransparency = 1.000
+			TextLabel_25.Position = UDim2.new(0.658379436, 0, 0.119259253, 0)
+			TextLabel_25.Size = UDim2.new(0, 318, 0, 44)
+			TextLabel_25.Font = Enum.Font.Cartoon
+			TextLabel_25.Text = "Rocket50in50 has that without scripts"
+			TextLabel_25.TextColor3 = Color3.fromRGB(12, 48, 255)
+			TextLabel_25.TextScaled = true
+			TextLabel_25.TextSize = 14.000
+			TextLabel_25.TextWrapped = true
+
+			TextLabel_26.Parent = admincmdsgui
+			TextLabel_26.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel_26.BackgroundTransparency = 1.000
+			TextLabel_26.Position = UDim2.new(0.0211786367, 0, 0.133059055, 0)
+			TextLabel_26.Size = UDim2.new(0, 313, 0, 50)
+			TextLabel_26.Font = Enum.Font.Cartoon
+			TextLabel_26.Text = "onlybtaura|args:none"
+			TextLabel_26.TextColor3 = Color3.fromRGB(255, 0, 0)
+			TextLabel_26.TextScaled = true
+			TextLabel_26.TextSize = 14.000
+			TextLabel_26.TextWrapped = true
+
+			TextLabel_27.Parent = admincmdsgui
+			TextLabel_27.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel_27.BackgroundTransparency = 1.000
+			TextLabel_27.Position = UDim2.new(0.315659344, 0, 0.132939517, 0)
+			TextLabel_27.Size = UDim2.new(0, 400, 0, 50)
+			TextLabel_27.Font = Enum.Font.Cartoon
+			TextLabel_27.Text = "Aliasses: none"
+			TextLabel_27.TextColor3 = Color3.fromRGB(12, 48, 255)
+			TextLabel_27.TextScaled = true
+			TextLabel_27.TextSize = 14.000
+			TextLabel_27.TextWrapped = true
+
+			TextLabel_28.Parent = admincmdsgui
+			TextLabel_28.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel_28.BackgroundTransparency = 1.000
+			TextLabel_28.Position = UDim2.new(0.651012957, 0, 0.133518517, 0)
+			TextLabel_28.Size = UDim2.new(0, 318, 0, 44)
+			TextLabel_28.Font = Enum.Font.Cartoon
+			TextLabel_28.Text = "Rocket50in50's alt has that without scripts."
+			TextLabel_28.TextColor3 = Color3.fromRGB(12, 48, 255)
+			TextLabel_28.TextScaled = true
+			TextLabel_28.TextSize = 14.000
+			TextLabel_28.TextWrapped = true
+
+			TextLabel_29.Parent = admincmdsgui
+			TextLabel_29.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel_29.BackgroundTransparency = 1.000
+			TextLabel_29.Position = UDim2.new(0.0211786367, 0, 0.147133127, 0)
+			TextLabel_29.Size = UDim2.new(0, 313, 0, 50)
+			TextLabel_29.Font = Enum.Font.Cartoon
+			TextLabel_29.Text = "suicide|args:none"
+			TextLabel_29.TextColor3 = Color3.fromRGB(255, 0, 0)
+			TextLabel_29.TextScaled = true
+			TextLabel_29.TextSize = 14.000
+			TextLabel_29.TextWrapped = true
+
+			TextLabel_30.Parent = admincmdsgui
+			TextLabel_30.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel_30.BackgroundTransparency = 1.000
+			TextLabel_30.Position = UDim2.new(0.315659344, 0, 0.14701359, 0)
+			TextLabel_30.Size = UDim2.new(0, 400, 0, 50)
+			TextLabel_30.Font = Enum.Font.Cartoon
+			TextLabel_30.Text = "Aliasses: killme"
+			TextLabel_30.TextColor3 = Color3.fromRGB(12, 48, 255)
+			TextLabel_30.TextScaled = true
+			TextLabel_30.TextSize = 14.000
+			TextLabel_30.TextWrapped = true
+
+			TextLabel_31.Parent = admincmdsgui
+			TextLabel_31.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel_31.BackgroundTransparency = 1.000
+			TextLabel_31.Position = UDim2.new(0.658379436, 0, 0.146851853, 0)
+			TextLabel_31.Size = UDim2.new(0, 318, 0, 44)
+			TextLabel_31.Font = Enum.Font.Cartoon
+			TextLabel_31.Text = "I think the emos will like this one."
+			TextLabel_31.TextColor3 = Color3.fromRGB(12, 48, 255)
+			TextLabel_31.TextScaled = true
+			TextLabel_31.TextSize = 14.000
+			TextLabel_31.TextWrapped = true
+
+			TextLabel_32.Parent = admincmdsgui
+			TextLabel_32.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel_32.BackgroundTransparency = 1.000
+			TextLabel_32.Position = UDim2.new(0.0211786367, 0, 0.162873864, 0)
+			TextLabel_32.Size = UDim2.new(0, 313, 0, 50)
+			TextLabel_32.Font = Enum.Font.Cartoon
+			TextLabel_32.Text = "giverep|args:none"
+			TextLabel_32.TextColor3 = Color3.fromRGB(255, 0, 0)
+			TextLabel_32.TextScaled = true
+			TextLabel_32.TextSize = 14.000
+			TextLabel_32.TextWrapped = true
+
+			TextLabel_33.Parent = admincmdsgui
+			TextLabel_33.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel_33.BackgroundTransparency = 1.000
+			TextLabel_33.Position = UDim2.new(0.315659344, 0, 0.162754327, 0)
+			TextLabel_33.Size = UDim2.new(0, 400, 0, 50)
+			TextLabel_33.Font = Enum.Font.Cartoon
+			TextLabel_33.Text = "Aliasses: none"
+			TextLabel_33.TextColor3 = Color3.fromRGB(12, 48, 255)
+			TextLabel_33.TextScaled = true
+			TextLabel_33.TextSize = 14.000
+			TextLabel_33.TextWrapped = true
+
+			-- Scripts:
+
+			local function GWCC_fake_script() -- TextButton.LocalScript 
+				local script = Instance.new('LocalScript', TextButton)
+
+				script.Parent.MouseButton1Click:Connect(function()
+					script.Parent.Parent:Destroy()
+				end)
+			end
+			coroutine.wrap(GWCC_fake_script)()
 end
 
-commands.primitivenovoid = function(sender)
-	poop = false
+		commands.uncbring = function(sender)
+			uw_3.Value = true
+		end
 
-	local A_1 = "on"
-	local A_2 = "All"
-	local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
-	Event:FireServer(A_1, A_2)
-	game["Run Service"].RenderStepped:Connect(function()
-		game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
-	end)
-end
-commands.lagchat = function(sender)
-	local A_1 = "#######################################################################"
-	local A_2 = "All"
-	local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
-	Event:FireServer(A_1, A_2)
-	local A_1 = "#######################################################################"
-	local A_2 = "All"
-	local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
-	Event:FireServer(A_1, A_2)
-	local A_1 = "#######################################################################"
-	local A_2 = "All"
-	local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
-	Event:FireServer(A_1, A_2)
-	local A_1 = "#######################################################################"
-	local A_2 = "All"
-	local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
-	Event:FireServer(A_1, A_2)
-	local A_1 = "#######################################################################"
-	local A_2 = "All"
-	local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
-	Event:FireServer(A_1, A_2)
+		commands.antilogs = function(sender, arguments)
 
-end
+			local A_1 = "anti log pickle"
+			local A_2 = "All"
+			local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+			Event:FireServer(A_1, A_2)
+			local mt = getrawmetatable(game)
+			local old = mt.__namecall
+			setreadonly(mt, false)
+
+			mt.__namecall = newcclosure(function(self, ...)
+
+				local args = {...}
+				local method = getnamecallmethod()
+
+				if method == "Fire" and self.Name == "MessagePosted" then
+					return wait(9e9)
+				end
+
+				return old(self, ...)
+
+			end)
 
 
+			local CloneFunction = clonefunction
+			local CheckCaller = CloneFunction(checkcaller)
+			local HookFunction = CloneFunction(hookfunction)
+			local LocalPlayer = game.Players.PlayerAdded:wait()
 
-commands.spin = function(sender, arguments)
-	power = tonumber(arguments[1]) 
+			local PostMessage = require(LocalPlayer:WaitForChild("PlayerScripts", 1/0):WaitForChild("ChatScript", 1/0):WaitForChild("ChatMain", 1/0)).MessagePosted
+			getgenv().MessageEvent = Instance.new("BindableEvent")
 
-	game:GetService('RunService').Stepped:connect(function()
-		if hastospin == true then return end
-		game.Players.LocalPlayer.Character.Head.CanCollide = false
-		game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
-		game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
-	end)
-	wait(.1)
-	local bambam = Instance.new("BodyThrust")
-	bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
-	bambam.Force = Vector3.new(power,power,power)
-	bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
-end
+			local OldFunctionHook
+			local PostMessageHook = function(self, msg)
+				if not CheckCaller() and self == PostMessage then
+					MessageEvent:Fire(msg)
+					return
+				end
+				return OldFunctionHook(self, msg)
+			end
+			OldFunctionHook = HookFunction(PostMessage.fire, PostMessageHook)
+		end
 
 
 
-commands.autofireball = function(sender, arguments)
-	local speed = ''
-	speed = tonumber(arguments[1])
-	uw_2.Value = false
-	while task.wait(speed) do
-		if uw_2.Value == true then return end
-		local A_1 = 
-			{
-				[1] = "Skill_SpherePunch", 
-				[2] = Vector3.new(-90,90,90)
-			}
-		local Event = game:GetService("ReplicatedStorage").RemoteEvent
-		Event:FireServer(A_1)
-	end
-
-end
-
-commands.unautofireball = function(sender)
-	uw_2.Value = true
-end
 
 
-commands.cbring = function(sender, arguments)
-	uw_3.Value = false
-	local playerToCbring = arguments[1]
-	local plrToCbring = findPlayer(playerToCbring)
-	game["Run Service"].Heartbeat:connect(function()
-		if uw_3.Value == true then return end
-		workspace[plrToCbring.Name].HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart)
-	end)
-end
-commands.cmds = function(sender)
-	-- Gui to Lua
-	-- Version: 3.2
 
-	-- Instances:
 
-	local admincmdsgui = Instance.new("ScrollingFrame")
-	local title = Instance.new("TextLabel")
-	local TextLabel = Instance.new("TextLabel")
-	local TextLabel_2 = Instance.new("TextLabel")
-	local TextLabel_3 = Instance.new("TextLabel")
-	local title_2 = Instance.new("TextLabel")
-	local TextLabel_4 = Instance.new("TextLabel")
-	local TextLabel_5 = Instance.new("TextLabel")
-	local TextLabel_6 = Instance.new("TextLabel")
-	local TextLabel_7 = Instance.new("TextLabel")
-	local TextLabel_8 = Instance.new("TextLabel")
-	local TextLabel_9 = Instance.new("TextLabel")
-	local TextLabel_10 = Instance.new("TextLabel")
-	local TextLabel_11 = Instance.new("TextLabel")
-	local TextLabel_12 = Instance.new("TextLabel")
-	local TextLabel_13 = Instance.new("TextLabel")
-	local TextLabel_14 = Instance.new("TextLabel")
-	local TextLabel_15 = Instance.new("TextLabel")
-	local TextLabel_16 = Instance.new("TextLabel")
-	local TextLabel_17 = Instance.new("TextLabel")
-	local TextLabel_18 = Instance.new("TextLabel")
-	local TextButton = Instance.new("TextButton")
-	local TextLabel_19 = Instance.new("TextLabel")
-	local TextLabel_20 = Instance.new("TextLabel")
-	local TextLabel_21 = Instance.new("TextLabel")
-	local TextLabel_22 = Instance.new("TextLabel")
-	local TextLabel_23 = Instance.new("TextLabel")
-	local TextLabel_24 = Instance.new("TextLabel")
-	local TextLabel_25 = Instance.new("TextLabel")
-	local TextLabel_26 = Instance.new("TextLabel")
-	local TextLabel_27 = Instance.new("TextLabel")
 
-	--Properties:
+		commands.tp = function(sender, arguments)
+			print("Fired by"..sender.Name)
 
-	admincmdsgui.Name = "admincmdsgui"
-	admincmdsgui.Parent = game.Players.LocalPlayer.PlayerGui.ScreenGui
-	admincmdsgui.Active = true
-	admincmdsgui.AnchorPoint = Vector2.new(0.5, 0.5)
-	admincmdsgui.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-	admincmdsgui.BackgroundTransparency = 0.300
-	admincmdsgui.BorderColor3 = Color3.fromRGB(5, 92, 255)
-	admincmdsgui.BorderSizePixel = 7
-	admincmdsgui.Position = UDim2.new(0.5, 0, 0.5, 0)
-	admincmdsgui.Size = UDim2.new(0, 1086, 0, 474)
-	admincmdsgui.CanvasPosition = Vector2.new(0, 450)
-	admincmdsgui.CanvasSize = UDim2.new(0, 0, 5, 0)
+			for i, playerName in pairs(arguments) do
+				print(playerName)
+			end
 
-	title.Name = "title"
-	title.Parent = admincmdsgui
-	title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	title.BackgroundTransparency = 1.000
-	title.Position = UDim2.new(0.123291954, 0, 0.0014086595, 0)
-	title.Size = UDim2.new(0, 848, 0, 50)
-	title.Font = Enum.Font.Fantasy
-	title.Text = "Windshub AdminCommands list:"
-	title.TextColor3 = Color3.fromRGB(255, 0, 0)
-	title.TextScaled = true
-	title.TextSize = 14.000
-	title.TextStrokeColor3 = Color3.fromRGB(0, 89, 255)
-	title.TextWrapped = true
+			local playerToTeleportName = arguments[1]
+			local playerToTeleportToName = arguments[2]
 
-	TextLabel.Parent = admincmdsgui
-	TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	TextLabel.BackgroundTransparency = 1.000
-	TextLabel.Position = UDim2.new(0.0211786367, 0, 0.0187997967, 0)
-	TextLabel.Size = UDim2.new(0, 313, 0, 50)
-	TextLabel.Font = Enum.Font.Cartoon
-	TextLabel.Text = "primitivenovoid|args:none"
-	TextLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
-	TextLabel.TextScaled = true
-	TextLabel.TextSize = 14.000
-	TextLabel.TextWrapped = true
+			if playerToTeleportName and playerToTeleportToName then
 
-	TextLabel_2.Parent = admincmdsgui
-	TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	TextLabel_2.BackgroundTransparency = 1.000
-	TextLabel_2.Position = UDim2.new(0.0211786367, 0, 0.0325035006, 0)
-	TextLabel_2.Size = UDim2.new(0, 313, 0, 50)
-	TextLabel_2.Font = Enum.Font.Cartoon
-	TextLabel_2.Text = "antilogs|args:none"
-	TextLabel_2.TextColor3 = Color3.fromRGB(255, 0, 0)
-	TextLabel_2.TextScaled = true
-	TextLabel_2.TextSize = 14.000
-	TextLabel_2.TextWrapped = true
+				local plrToTP = findPlayer(playerToTeleportName)
+				local plrToTPTo = findPlayer(playerToTeleportToName)
 
-	TextLabel_3.Parent = admincmdsgui
-	TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	TextLabel_3.BackgroundTransparency = 1.000
-	TextLabel_3.Position = UDim2.new(0.0211786367, 0, 0.0480590574, 0)
-	TextLabel_3.Size = UDim2.new(0, 313, 0, 50)
-	TextLabel_3.Font = Enum.Font.Cartoon
-	TextLabel_3.Text = "sun|args:none"
-	TextLabel_3.TextColor3 = Color3.fromRGB(255, 0, 0)
-	TextLabel_3.TextScaled = true
-	TextLabel_3.TextSize = 14.000
-	TextLabel_3.TextWrapped = true
 
-	title_2.Name = "title"
-	title_2.Parent = admincmdsgui
-	title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	title_2.BackgroundTransparency = 1.000
-	title_2.Position = UDim2.new(0.122371145, 0, 0.0106679192, 0)
-	title_2.Size = UDim2.new(0, 848, 0, 50)
-	title_2.Font = Enum.Font.Fantasy
-	title_2.Text = "[Prefix: '!']"
-	title_2.TextColor3 = Color3.fromRGB(255, 0, 0)
-	title_2.TextSize = 40.000
-	title_2.TextStrokeColor3 = Color3.fromRGB(0, 89, 255)
-	title_2.TextWrapped = true
+				if plrToTP and plrToTPTo then
+					plrToTP.Character.HumanoidRootPart.CFrame = CFrame.new(plrToTPTo.Character.HumanoidRootPart.Position)
+				end
+			end
+		end
 
-	TextLabel_4.Parent = admincmdsgui
-	TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	TextLabel_4.BackgroundTransparency = 1.000
-	TextLabel_4.Position = UDim2.new(0.0211786367, 0, 0.0636146143, 0)
-	TextLabel_4.Size = UDim2.new(0, 313, 0, 50)
-	TextLabel_4.Font = Enum.Font.Cartoon
-	TextLabel_4.Text = "ppsc| args: Player's name"
-	TextLabel_4.TextColor3 = Color3.fromRGB(255, 0, 0)
-	TextLabel_4.TextScaled = true
-	TextLabel_4.TextSize = 14.000
-	TextLabel_4.TextWrapped = true
 
-	TextLabel_5.Parent = admincmdsgui
-	TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	TextLabel_5.BackgroundTransparency = 1.000
-	TextLabel_5.Position = UDim2.new(0.295401484, 0, 0.0478148162, 0)
-	TextLabel_5.Size = UDim2.new(0, 313, 0, 50)
-	TextLabel_5.Font = Enum.Font.Cartoon
-	TextLabel_5.Text = "aliasses: none"
-	TextLabel_5.TextColor3 = Color3.fromRGB(12, 48, 255)
-	TextLabel_5.TextScaled = true
-	TextLabel_5.TextSize = 14.000
-	TextLabel_5.TextWrapped = true
+		commands.ultrappscript = function(sender,arguments)
+			uw = false
 
-	TextLabel_6.Parent = admincmdsgui
-	TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	TextLabel_6.BackgroundTransparency = 1.000
-	TextLabel_6.Position = UDim2.new(0.296322286, 0, 0.0324444436, 0)
-	TextLabel_6.Size = UDim2.new(0, 313, 0, 50)
-	TextLabel_6.Font = Enum.Font.Cartoon
-	TextLabel_6.Text = "aliasses: none"
-	TextLabel_6.TextColor3 = Color3.fromRGB(12, 48, 255)
-	TextLabel_6.TextScaled = true
-	TextLabel_6.TextSize = 14.000
-	TextLabel_6.TextWrapped = true
 
-	TextLabel_7.Parent = admincmdsgui
-	TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	TextLabel_7.BackgroundTransparency = 1.000
-	TextLabel_7.Position = UDim2.new(0.296322286, 0, 0.0187407397, 0)
-	TextLabel_7.Size = UDim2.new(0, 313, 0, 50)
-	TextLabel_7.Font = Enum.Font.Cartoon
-	TextLabel_7.Text = "aliasses: none"
-	TextLabel_7.TextColor3 = Color3.fromRGB(12, 48, 255)
-	TextLabel_7.TextScaled = true
-	TextLabel_7.TextSize = 14.000
-	TextLabel_7.TextWrapped = true
+			local playerToTeleportToName = arguments[1]
 
-	TextLabel_8.Parent = admincmdsgui
-	TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	TextLabel_8.BackgroundTransparency = 1.000
-	TextLabel_8.Position = UDim2.new(0.32210502, 0, 0.0646061897, 0)
-	TextLabel_8.Size = UDim2.new(0, 400, 0, 50)
-	TextLabel_8.Font = Enum.Font.Cartoon
-	TextLabel_8.Text = "aliasses: ppscript,ultrappscript"
-	TextLabel_8.TextColor3 = Color3.fromRGB(12, 48, 255)
-	TextLabel_8.TextScaled = true
-	TextLabel_8.TextSize = 14.000
-	TextLabel_8.TextWrapped = true
+			if  playerToTeleportToName then
+				local plrToTPTo = findPlayer(playerToTeleportToName)
 
-	TextLabel_9.Parent = admincmdsgui
-	TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	TextLabel_9.BackgroundTransparency = 1.000
-	TextLabel_9.Position = UDim2.new(0.583793759, 0, 0.0175925922, 0)
-	TextLabel_9.Size = UDim2.new(0, 381, 0, 70)
-	TextLabel_9.Font = Enum.Font.Cartoon
-	TextLabel_9.Text = "A primitive script to prevent primitive voids."
-	TextLabel_9.TextColor3 = Color3.fromRGB(12, 48, 255)
-	TextLabel_9.TextScaled = true
-	TextLabel_9.TextSize = 14.000
-	TextLabel_9.TextWrapped = true
 
-	TextLabel_10.Parent = admincmdsgui
-	TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	TextLabel_10.BackgroundTransparency = 1.000
-	TextLabel_10.Position = UDim2.new(0.583793759, 0, 0.0305555537, 0)
-	TextLabel_10.Size = UDim2.new(0, 381, 0, 70)
-	TextLabel_10.Font = Enum.Font.Cartoon
-	TextLabel_10.Text = "Unlimited Swearing!"
-	TextLabel_10.TextColor3 = Color3.fromRGB(12, 48, 255)
-	TextLabel_10.TextScaled = true
-	TextLabel_10.TextSize = 14.000
-	TextLabel_10.TextWrapped = true
+				if plrToTPTo then
+					UltraPpScript = false
+					game["Run Service"].Heartbeat:Connect(function()
+						if uw == true then return end
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =  CFrame.new(game.Players[plrToTPTo.Name].Character.UpperTorso.Position) * CFrame.new(0, 0, 0)
+						game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_Start",game.Players[plrToTPTo.Name]})
 
-	TextLabel_11.Parent = admincmdsgui
-	TextLabel_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	TextLabel_11.BackgroundTransparency = 1.000
-	TextLabel_11.Position = UDim2.new(0.593001842, 0, 0.0461111106, 0)
-	TextLabel_11.Size = UDim2.new(0, 381, 0, 70)
-	TextLabel_11.Font = Enum.Font.Cartoon
-	TextLabel_11.Text = "A sun made out of SafeZone shields."
-	TextLabel_11.TextColor3 = Color3.fromRGB(12, 48, 255)
-	TextLabel_11.TextScaled = true
-	TextLabel_11.TextSize = 14.000
-	TextLabel_11.TextWrapped = true
+						game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_End"})
 
-	TextLabel_12.Parent = admincmdsgui
-	TextLabel_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	TextLabel_12.BackgroundTransparency = 1.000
-	TextLabel_12.Position = UDim2.new(0.689686954, 0, 0.0649999976, 0)
-	TextLabel_12.Size = UDim2.new(0, 318, 0, 44)
-	TextLabel_12.Font = Enum.Font.Cartoon
-	TextLabel_12.Text = "Pp main's dream."
-	TextLabel_12.TextColor3 = Color3.fromRGB(12, 48, 255)
-	TextLabel_12.TextScaled = true
-	TextLabel_12.TextSize = 14.000
-	TextLabel_12.TextWrapped = true
+						game.Players.LocalPlayer.Character.RightUpperArm:Remove()
+						game.Players.LocalPlayer.Character.LeftUpperArm:Remove()
+					end)  end end 
 
-	TextLabel_13.Parent = admincmdsgui
-	TextLabel_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	TextLabel_13.BackgroundTransparency = 1.000
-	TextLabel_13.Position = UDim2.new(0.0211786367, 0, 0.07972572, 0)
-	TextLabel_13.Size = UDim2.new(0, 313, 0, 50)
-	TextLabel_13.Font = Enum.Font.Cartoon
-	TextLabel_13.Text = "lagchat| args:none"
-	TextLabel_13.TextColor3 = Color3.fromRGB(255, 0, 0)
-	TextLabel_13.TextScaled = true
-	TextLabel_13.TextSize = 14.000
-	TextLabel_13.TextWrapped = true
 
-	TextLabel_14.Parent = admincmdsgui
-	TextLabel_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	TextLabel_14.BackgroundTransparency = 1.000
-	TextLabel_14.Position = UDim2.new(0.32210502, 0, 0.0799765587, 0)
-	TextLabel_14.Size = UDim2.new(0, 400, 0, 50)
-	TextLabel_14.Font = Enum.Font.Cartoon
-	TextLabel_14.Text = "Aliasses: none"
-	TextLabel_14.TextColor3 = Color3.fromRGB(12, 48, 255)
-	TextLabel_14.TextScaled = true
-	TextLabel_14.TextSize = 14.000
-	TextLabel_14.TextWrapped = true
+		end
 
-	TextLabel_15.Parent = admincmdsgui
-	TextLabel_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	TextLabel_15.BackgroundTransparency = 1.000
-	TextLabel_15.Position = UDim2.new(0.658379376, 0, 0.0803703666, 0)
-	TextLabel_15.Size = UDim2.new(0, 318, 0, 44)
-	TextLabel_15.Font = Enum.Font.Cartoon
-	TextLabel_15.Text = "########### (literally)"
-	TextLabel_15.TextColor3 = Color3.fromRGB(12, 48, 255)
-	TextLabel_15.TextScaled = true
-	TextLabel_15.TextSize = 14.000
-	TextLabel_15.TextWrapped = true
 
-	TextLabel_16.Parent = admincmdsgui
-	TextLabel_16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	TextLabel_16.BackgroundTransparency = 1.000
-	TextLabel_16.Position = UDim2.new(0.0211786367, 0, 0.091947943, 0)
-	TextLabel_16.Size = UDim2.new(0, 313, 0, 50)
-	TextLabel_16.Font = Enum.Font.Cartoon
-	TextLabel_16.Text = "unppsc|args:none"
-	TextLabel_16.TextColor3 = Color3.fromRGB(255, 0, 0)
-	TextLabel_16.TextScaled = true
-	TextLabel_16.TextSize = 14.000
-	TextLabel_16.TextWrapped = true
+		commands.ppscript = function(sender,arguments)
+			uw = false
 
-	TextLabel_17.Parent = admincmdsgui
-	TextLabel_17.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	TextLabel_17.BackgroundTransparency = 1.000
-	TextLabel_17.Position = UDim2.new(0.321184218, 0, 0.0918284133, 0)
-	TextLabel_17.Size = UDim2.new(0, 400, 0, 50)
-	TextLabel_17.Font = Enum.Font.Cartoon
-	TextLabel_17.Text = "Alliasses: unppscript,unultrappscript"
-	TextLabel_17.TextColor3 = Color3.fromRGB(12, 48, 255)
-	TextLabel_17.TextScaled = true
-	TextLabel_17.TextSize = 14.000
-	TextLabel_17.TextWrapped = true
 
-	TextLabel_18.Parent = admincmdsgui
-	TextLabel_18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	TextLabel_18.BackgroundTransparency = 1.000
-	TextLabel_18.Position = UDim2.new(0.688766122, 0, 0.0918518454, 0)
-	TextLabel_18.Size = UDim2.new(0, 318, 0, 44)
-	TextLabel_18.Font = Enum.Font.Cartoon
-	TextLabel_18.Text = "Stops death."
-	TextLabel_18.TextColor3 = Color3.fromRGB(12, 48, 255)
-	TextLabel_18.TextScaled = true
-	TextLabel_18.TextSize = 14.000
-	TextLabel_18.TextWrapped = true
+			local playerToTeleportToName = arguments[1]
 
-	TextButton.Parent = admincmdsgui
-	TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	TextButton.BackgroundTransparency = 1.000
-	TextButton.Position = UDim2.new(0, 0, -4.68818471e-05, 0)
-	TextButton.Size = UDim2.new(0, 79, 0, 50)
-	TextButton.Font = Enum.Font.Fantasy
-	TextButton.Text = "X"
-	TextButton.TextColor3 = Color3.fromRGB(255, 0, 0)
-	TextButton.TextScaled = true
-	TextButton.TextSize = 14.000
-	TextButton.TextStrokeColor3 = Color3.fromRGB(255, 109, 5)
-	TextButton.TextStrokeTransparency = 0.000
-	TextButton.TextWrapped = true
+			if  playerToTeleportToName then
+				local plrToTPTo = findPlayer(playerToTeleportToName)
 
-	TextLabel_19.Parent = admincmdsgui
-	TextLabel_19.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	TextLabel_19.BackgroundTransparency = 1.000
-	TextLabel_19.Position = UDim2.new(0.0211786367, 0, 0.105281278, 0)
-	TextLabel_19.Size = UDim2.new(0, 313, 0, 50)
-	TextLabel_19.Font = Enum.Font.Cartoon
-	TextLabel_19.Text = "norep|args:none"
-	TextLabel_19.TextColor3 = Color3.fromRGB(255, 0, 0)
-	TextLabel_19.TextScaled = true
-	TextLabel_19.TextSize = 14.000
-	TextLabel_19.TextWrapped = true
 
-	TextLabel_20.Parent = admincmdsgui
-	TextLabel_20.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	TextLabel_20.BackgroundTransparency = 1.000
-	TextLabel_20.Position = UDim2.new(0.32210502, 0, 0.105161749, 0)
-	TextLabel_20.Size = UDim2.new(0, 400, 0, 50)
-	TextLabel_20.Font = Enum.Font.Cartoon
-	TextLabel_20.Text = "Aliasses: none"
-	TextLabel_20.TextColor3 = Color3.fromRGB(12, 48, 255)
-	TextLabel_20.TextScaled = true
-	TextLabel_20.TextSize = 14.000
-	TextLabel_20.TextWrapped = true
+				if plrToTPTo then
+					UltraPpScript = false
+					game["Run Service"].Heartbeat:Connect(function()
+						if uw == true then return end
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =  CFrame.new(game.Players[plrToTPTo.Name].Character.UpperTorso.Position) * CFrame.new(0, 0, 0)
+						game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_Start",game.Players[plrToTPTo.Name]})
 
-	TextLabel_21.Parent = admincmdsgui
-	TextLabel_21.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	TextLabel_21.BackgroundTransparency = 1.000
-	TextLabel_21.Position = UDim2.new(0.677716434, 0, 0.104259253, 0)
-	TextLabel_21.Size = UDim2.new(0, 318, 0, 44)
-	TextLabel_21.Font = Enum.Font.Cartoon
-	TextLabel_21.Text = "Now they have no excuses to not die."
-	TextLabel_21.TextColor3 = Color3.fromRGB(12, 48, 255)
-	TextLabel_21.TextScaled = true
-	TextLabel_21.TextSize = 14.000
-	TextLabel_21.TextWrapped = true
+						game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_End"})
 
-	TextLabel_22.Parent = admincmdsgui
-	TextLabel_22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	TextLabel_22.BackgroundTransparency = 1.000
-	TextLabel_22.Position = UDim2.new(0.0211786367, 0, 0.119355351, 0)
-	TextLabel_22.Size = UDim2.new(0, 313, 0, 50)
-	TextLabel_22.Font = Enum.Font.Cartoon
-	TextLabel_22.Text = "onlyfistaura|args:none"
-	TextLabel_22.TextColor3 = Color3.fromRGB(255, 0, 0)
-	TextLabel_22.TextScaled = true
-	TextLabel_22.TextSize = 14.000
-	TextLabel_22.TextWrapped = true
 
-	TextLabel_23.Parent = admincmdsgui
-	TextLabel_23.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	TextLabel_23.BackgroundTransparency = 1.000
-	TextLabel_23.Position = UDim2.new(0.32210502, 0, 0.119235821, 0)
-	TextLabel_23.Size = UDim2.new(0, 400, 0, 50)
-	TextLabel_23.Font = Enum.Font.Cartoon
-	TextLabel_23.Text = "Aliasses: none"
-	TextLabel_23.TextColor3 = Color3.fromRGB(12, 48, 255)
-	TextLabel_23.TextScaled = true
-	TextLabel_23.TextSize = 14.000
-	TextLabel_23.TextWrapped = true
+					end)  end end 
 
-	TextLabel_24.Parent = admincmdsgui
-	TextLabel_24.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	TextLabel_24.BackgroundTransparency = 1.000
-	TextLabel_24.Position = UDim2.new(0.658379436, 0, 0.119259253, 0)
-	TextLabel_24.Size = UDim2.new(0, 318, 0, 44)
-	TextLabel_24.Font = Enum.Font.Cartoon
-	TextLabel_24.Text = "Rocket50in50 has that without scripts"
-	TextLabel_24.TextColor3 = Color3.fromRGB(12, 48, 255)
-	TextLabel_24.TextScaled = true
-	TextLabel_24.TextSize = 14.000
-	TextLabel_24.TextWrapped = true
 
-	TextLabel_25.Parent = admincmdsgui
-	TextLabel_25.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	TextLabel_25.BackgroundTransparency = 1.000
-	TextLabel_25.Position = UDim2.new(0.0211786367, 0, 0.133059055, 0)
-	TextLabel_25.Size = UDim2.new(0, 313, 0, 50)
-	TextLabel_25.Font = Enum.Font.Cartoon
-	TextLabel_25.Text = "onlybtaura|args:none"
-	TextLabel_25.TextColor3 = Color3.fromRGB(255, 0, 0)
-	TextLabel_25.TextScaled = true
-	TextLabel_25.TextSize = 14.000
-	TextLabel_25.TextWrapped = true
+		end
 
-	TextLabel_26.Parent = admincmdsgui
-	TextLabel_26.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	TextLabel_26.BackgroundTransparency = 1.000
-	TextLabel_26.Position = UDim2.new(0.315659344, 0, 0.132939517, 0)
-	TextLabel_26.Size = UDim2.new(0, 400, 0, 50)
-	TextLabel_26.Font = Enum.Font.Cartoon
-	TextLabel_26.Text = "Aliasses: none"
-	TextLabel_26.TextColor3 = Color3.fromRGB(12, 48, 255)
-	TextLabel_26.TextScaled = true
-	TextLabel_26.TextSize = 14.000
-	TextLabel_26.TextWrapped = true
 
-	TextLabel_27.Parent = admincmdsgui
-	TextLabel_27.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	TextLabel_27.BackgroundTransparency = 1.000
-	TextLabel_27.Position = UDim2.new(0.651012957, 0, 0.133518517, 0)
-	TextLabel_27.Size = UDim2.new(0, 318, 0, 44)
-	TextLabel_27.Font = Enum.Font.Cartoon
-	TextLabel_27.Text = "Rocket50in50's alt has that without scripts."
-	TextLabel_27.TextColor3 = Color3.fromRGB(12, 48, 255)
-	TextLabel_27.TextScaled = true
-	TextLabel_27.TextSize = 14.000
-	TextLabel_27.TextWrapped = true
 
-	-- Scripts:
+		commands.ppsc = function(sender,arguments)
+			uw = false
 
-	-- admincmdsgui.Script is disabled.
-	local function NUBIAWO_fake_script() -- TextButton.LocalScript 
-		local script = Instance.new('LocalScript', TextButton)
 
-		script.Parent.MouseButton1Click:Connect(function()
-			script.Parent.Parent:Destroy()
+			local playerToTeleportToName = arguments[1]
+
+			if  playerToTeleportToName then
+				local plrToTPTo = findPlayer(playerToTeleportToName)
+
+
+				if plrToTPTo then
+					UltraPpScript = false
+					game["Run Service"].Heartbeat:Connect(function()
+						if uw == true then 
+							plrToTPTo = nil
+
+						else
+							game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =  CFrame.new(game.Players[plrToTPTo.Name].Character.UpperTorso.Position) * CFrame.new(0, -10, 0)
+							game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_Start",game.Players[plrToTPTo.Name]})
+
+							game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_End"})
+
+
+						end  end) end end
+
+
+		end
+
+		
+
+		commands.giverep = function(sender,arguments)
+			uw_4 = false
+
+
+			local playerToTeleportToName = arguments[1]
+
+			if  playerToTeleportToName then
+				local plrToTPTo = findPlayer(playerToTeleportToName)
+
+
+				if plrToTPTo then
+					UltraPpScript = false
+					game["Run Service"].Heartbeat:Connect(function()
+						if uw_4 == true then 
+							plrToTPTo = nil
+
+						else
+							pcall(function()
+								game.ReplicatedStorage.RemoteEvent:FireServer({"Respawn"})
+								game.Players.LocalPlayer.Character.ForceField:Remove()
+								game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =  CFrame.new(game.Players[plrToTPTo.Name].Character.UpperTorso.Position) * CFrame.new(0, -10, 0)
+								game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_Start",game.Players[plrToTPTo.Name]})
+
+								game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_End"})
+							end)
+						
+
+
+						end  end) end end 
+
+
+		end
+		
+		
+		commands.unultrappscript = function(sender,arguments)
+			uw = true
+
+		end
+
+		commands.ungiverep = function(sender,arguments)
+			uw_4 = true
+
+		end
+
+		commands.norep = function(sender,arguments)
+			game.Players.LocalPlayer.Character.Head.NameBbGui.NameTxt: Destroy()
+		end
+		commands.onlyfistaura = function(sender,arguments)
+			game.Players.LocalPlayer.Character.UpperTorso.Aura1:Destroy()
+			game.Players.LocalPlayer.Character.UpperTorso.Aura2:Destroy()
+			game.Players.LocalPlayer.Character.RightUpperLeg.Aura1:Destroy()
+			game.Players.LocalPlayer.Character.LeftUpperLeg.Aura1:Destroy()
+		end
+
+		commands.onlybtaura = function(sender,arguments)
+			game.Players.LocalPlayer.Character.RightHand.Aura1:Destroy()
+			game.Players.LocalPlayer.Character.RightHand.Aura2:Destroy()
+			game.Players.LocalPlayer.Character.RightHand.Aura3:Destroy()
+			game.Players.LocalPlayer.Character.LeftHand.Aura1:Destroy()
+			game.Players.LocalPlayer.Character.LeftHand.Aura2:Destroy()
+			game.Players.LocalPlayer.Character.LeftHand.Aura3:Destroy()
+		end
+
+
+		commands.unppscript = function(sender,arguments)
+			uw = true
+		end
+
+		commands.unppsc = function(sender,arguments)
+			uw = true
+		end
+
+
+
+
+		local player = game.Players.LocalPlayer
+		player.Chatted:Connect(function(message,recipient)
+			message = string.lower(message)
+
+
+			local splitString = message:split(" ")
+
+			local slashCommand = splitString[1]
+
+			local cmd = slashCommand:split(prefix)
+
+			local cmdName = cmd[2]
+
+			if commands[cmdName] then
+
+				local arguments = {}
+				for i = 2, #splitString, 1 do
+
+					table.insert(arguments,splitString[i])
+				end
+				commands[cmdName](player, arguments)
+			end
 		end)
-	end
-	coroutine.wrap(NUBIAWO_fake_script)()
-end
-
-commands.uncbring = function(sender)
-	uw_3.Value = true
-end
-
-commands.antilogs = function(sender, arguments)
-
-	local A_1 = "anti log pickle"
-	local A_2 = "All"
-	local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
-	Event:FireServer(A_1, A_2)
-	local mt = getrawmetatable(game)
-	local old = mt.__namecall
-	setreadonly(mt, false)
-
-	mt.__namecall = newcclosure(function(self, ...)
-
-		local args = {...}
-		local method = getnamecallmethod()
-
-		if method == "Fire" and self.Name == "MessagePosted" then
-			return wait(9e9)
-		end
-
-		return old(self, ...)
-
-	end)
-
-
-	local CloneFunction = clonefunction
-	local CheckCaller = CloneFunction(checkcaller)
-	local HookFunction = CloneFunction(hookfunction)
-	local LocalPlayer = game.Players.PlayerAdded:wait()
-
-	local PostMessage = require(LocalPlayer:WaitForChild("PlayerScripts", 1/0):WaitForChild("ChatScript", 1/0):WaitForChild("ChatMain", 1/0)).MessagePosted
-	getgenv().MessageEvent = Instance.new("BindableEvent")
-
-	local OldFunctionHook
-	local PostMessageHook = function(self, msg)
-		if not CheckCaller() and self == PostMessage then
-			MessageEvent:Fire(msg)
-			return
-		end
-		return OldFunctionHook(self, msg)
-	end
-	OldFunctionHook = HookFunction(PostMessage.fire, PostMessageHook)
-end
-
-
-
-
-
-
-
-
-commands.tp = function(sender, arguments)
-	print("Fired by"..sender.Name)
-
-	for i, playerName in pairs(arguments) do
-		print(playerName)
-	end
-
-	local playerToTeleportName = arguments[1]
-	local playerToTeleportToName = arguments[2]
-
-	if playerToTeleportName and playerToTeleportToName then
-
-		local plrToTP = findPlayer(playerToTeleportName)
-		local plrToTPTo = findPlayer(playerToTeleportToName)
-
-
-		if plrToTP and plrToTPTo then
-			plrToTP.Character.HumanoidRootPart.CFrame = CFrame.new(plrToTPTo.Character.HumanoidRootPart.Position)
-		end
-	end
-end
-
-
-commands.ultrappscript = function(sender,arguments)
-	uw = false
-
-
-	local playerToTeleportToName = arguments[1]
-
-	if  playerToTeleportToName then
-		local plrToTPTo = findPlayer(playerToTeleportToName)
-
-
-		if plrToTPTo then
-			UltraPpScript = false
-			game["Run Service"].Heartbeat:Connect(function()
-				if uw == true then return end
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =  CFrame.new(game.Players[plrToTPTo.Name].Character.UpperTorso.Position) * CFrame.new(0, 0, 0)
-				game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_Start",game.Players[plrToTPTo.Name]})
-
-				game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_End"})
-
-				game.Players.LocalPlayer.Character.RightUpperArm:Remove()
-				game.Players.LocalPlayer.Character.LeftUpperArm:Remove()
-			end)  end end 
-
-
-end
-
-
-commands.ppscript = function(sender,arguments)
-	uw = false
-
-
-	local playerToTeleportToName = arguments[1]
-
-	if  playerToTeleportToName then
-		local plrToTPTo = findPlayer(playerToTeleportToName)
-
-
-		if plrToTPTo then
-			UltraPpScript = false
-			game["Run Service"].Heartbeat:Connect(function()
-				if uw == true then return end
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =  CFrame.new(game.Players[plrToTPTo.Name].Character.UpperTorso.Position) * CFrame.new(0, 0, 0)
-				game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_Start",game.Players[plrToTPTo.Name]})
-
-				game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_End"})
-
-
-			end)  end end 
-
-
-end
-
-
-
-commands.ppsc = function(sender,arguments)
-	uw = false
-
-
-	local playerToTeleportToName = arguments[1]
-
-	if  playerToTeleportToName then
-		local plrToTPTo = findPlayer(playerToTeleportToName)
-
-
-		if plrToTPTo then
-			UltraPpScript = false
-			game["Run Service"].Heartbeat:Connect(function()
-				if uw == true then 
-					plrToTPTo = nil
-
-				else
-					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =  CFrame.new(game.Players[plrToTPTo.Name].Character.UpperTorso.Position) * CFrame.new(0, -10, 0)
-					game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_Start",game.Players[plrToTPTo.Name]})
-
-					game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_End"})
-
-
-				end  end) end end
-
-
-end
-
-
-commands.unultrappscript = function(sender,arguments)
-	uw = true
-
-end
-
-
-commands.norep = function(sender,arguments)
-	game.Players.LocalPlayer.Character.Head.NameBbGui.NameTxt: Destroy()
-end
-commands.onlyfistaura = function(sender,arguments)
-	game.Players.LocalPlayer.Character.UpperTorso.Aura1:Destroy()
-	game.Players.LocalPlayer.Character.UpperTorso.Aura2:Destroy()
-	game.Players.LocalPlayer.Character.RightUpperLeg.Aura1:Destroy()
-	game.Players.LocalPlayer.Character.LeftUpperLeg.Aura1:Destroy()
-end
-
-commands.onlybtaura = function(sender,arguments)
-	game.Players.LocalPlayer.Character.RightHand.Aura1:Destroy()
-	game.Players.LocalPlayer.Character.RightHand.Aura2:Destroy()
-	game.Players.LocalPlayer.Character.RightHand.Aura3:Destroy()
-	game.Players.LocalPlayer.Character.LeftHand.Aura1:Destroy()
-	game.Players.LocalPlayer.Character.LeftHand.Aura2:Destroy()
-	game.Players.LocalPlayer.Character.LeftHand.Aura3:Destroy()
-end
-
-
-commands.unppscript = function(sender,arguments)
-	uw = true
-end
-
-commands.unppsc = function(sender,arguments)
-	uw = true
-end
-
-
-
-
-local player = game.Players.LocalPlayer
-player.Chatted:Connect(function(message,recipient)
-	message = string.lower(message)
-
-
-	local splitString = message:split(" ")
-
-	local slashCommand = splitString[1]
-
-	local cmd = slashCommand:split(prefix)
-
-	local cmdName = cmd[2]
-
-	if commands[cmdName] then
-
-		local arguments = {}
-		for i = 2, #splitString, 1 do
-
-			table.insert(arguments,splitString[i])
-		end
-		commands[cmdName](player, arguments)
-	end
-end)
 
 
 
@@ -4359,8 +4506,8 @@ end)
 		btn422.MouseButton1Click:Connect(function()
 			btn421.TextColor3 = Color3.new(1,0,0)
 			local weld = Instance.new('Weld')
-                       Weld.Part0 = workspace.PotatoKillerHD21
-		       Weld.Part1 = workspace.Broodje_Eend
+			Weld.Part0 = workspace.PotatoKillerHD21
+			Weld.Part1 = workspace.Broodje_Eend
 		end)
 		local RunService=game:GetService('RunService')
 		RunService.Heartbeat:Connect(function()
@@ -4511,7 +4658,7 @@ end)
 							wait(.3)
 							cmdlp.Character:Remove()
 							cmdlp.CharacterAdded:Wait()
-						
+
 						end
 					end
 				end
@@ -4523,11 +4670,11 @@ end)
 		print('F2 for binded respawn without FF, F1 for binded respawn with ff\n F3 for binded respawn with noarms')
 
 	else
-		
-local url = "https://hooks.zapier.com/hooks/catch/10954516/b6gyj90/"
-local data0 =  game.Players.LocalPlayer.Name..' just tried to execute Windhub and failed.'
-local newdata0 = game:GetService'HttpService':JSONEncode(data0)
-game:HttpPost(url,newdata0)
+
+		local url = "https://hooks.zapier.com/hooks/catch/10954516/b6gyj90/"
+		local data0 =  game.Players.LocalPlayer.Name..' just tried to execute Windhub and failed.'
+		local newdata0 = game:GetService'HttpService':JSONEncode(data0)
+		game:HttpPost(url,newdata0)
 		game.Players.LocalPlayer:Kick('u r either not whitelisted or got wrong key\n ask force to give you key and whitelist u')
 	end
 end)
