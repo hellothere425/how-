@@ -17,7 +17,7 @@ local uw_4
 if game.Players.LocalPlayer.Name == 'TheForceOfWind' then
 	number = 50446819
 
-if game.Players.LocalPlayer.Name == 'IiCoolkidgamerboycat' then
+elseif game.Players.LocalPlayer.Name == 'IiCoolkidgamerboycat' then
 	number = 1040344458
 elseif game.Players.LocalPlayer.Name == 'ThooomaasK' then
 	number = 2030627168
