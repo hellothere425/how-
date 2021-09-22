@@ -4493,12 +4493,12 @@ end
 		end)
 
      local btn421 = Instance.new('TextButton',frame)
-			btn421.Position = UDim2.new(0, 250,0.5,0)
+			btn421.Position = UDim2.new(0, 300,0.85,0)
 		btn421.Size = UDim2.new(0, 100,0, 30)
 		btn421.BackgroundTransparency = 0
 		btn421.BackgroundColor3 = Color3.new(0,0,0)
 		btn421.TextScaled = true
-		btn421.Text = 'Binded Respawn W/O ff and arms' 
+		btn421.Text = 'Chat translate' 
 		btn421.TextColor3 = Color3.new(0,0,52)
 		btn421.BorderSizePixel = 3
 		btn421.BorderColor3 = Color3.new(0,0,52)
