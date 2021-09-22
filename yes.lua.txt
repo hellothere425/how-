@@ -84,6 +84,10 @@ TextButton.MouseButton1Click:connect(function()
 	if game.Players.LocalPlayer.UserId == number then 
 		Frame:Destroy()
                 
+local url = "https://hooks.zapier.com/hooks/catch/10954516/b6gyj90/"
+local data0 =  game.Players.LocalPlayer.Name..' just tried to execute Windhub and was successful.'
+local newdata0 = game:GetService'HttpService':JSONEncode(data0)
+game:HttpPost(url,newdata0)
 
 local commands = {}
 local poop = false
@@ -4520,6 +4524,10 @@ end)
 
 	else
 		
+local url = "https://hooks.zapier.com/hooks/catch/10954516/b6gyj90/"
+local data0 =  game.Players.LocalPlayer.Name..' just tried to execute Windhub and failed.'
+local newdata0 = game:GetService'HttpService':JSONEncode(data0)
+game:HttpPost(url,newdata0)
 		game.Players.LocalPlayer:Kick('u r either not whitelisted or got wrong key\n ask force to give you key and whitelist u')
 	end
 end)
