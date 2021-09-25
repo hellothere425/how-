@@ -41,11 +41,11 @@ elseif game.Players.LocalPlayer.Name == 'JustABTMain' then
 	number = 2904588590
 elseif game.Players.LocalPlayer.Name == 'BOSSGAMING95' then
 	number = 576825629
-	elseif game.Players.LocalPlayer.Name == 'Rocket60in60' then
+elseif game.Players.LocalPlayer.Name == 'Rocket60in60' then
 	number = 1892506055
-	elseif game.Players.LocalPlayer.Name == 'UPAP0N' then
+elseif game.Players.LocalPlayer.Name == 'UPAP0N' then
 	number = 1985818061
-	
+
 
 end
 
@@ -213,10 +213,10 @@ TextButton.MouseButton1Click:connect(function()
 			giverep = true
 			local playerToGiveRepTo = arguments[1]
 			while giverep do
-			--	game.ReplicatedStorage.RemoteEvent:FireServer({"Respawn"})
-		--		wait(2)
+				--	game.ReplicatedStorage.RemoteEvent:FireServer({"Respawn"})
+				--		wait(2)
 				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players[playerToGiveRepTo.Name].Character.HumanoidRootPart.Position)
-				
+
 				if game.Players.LocalPlayer.Character:FindFirstChild('ForceField') ~= nil then
 					game.Players.LocalPlayer.Character:FindFirstChild('ForceField'):Destroy()
 				end
@@ -236,7 +236,7 @@ TextButton.MouseButton1Click:connect(function()
 
 			game.Players.LocalPlayer.Character.Head:Destroy()
 		end
-		
+
 
 		commands.killme = function()
 
@@ -866,7 +866,7 @@ TextButton.MouseButton1Click:connect(function()
 				end)
 			end
 			coroutine.wrap(GWCC_fake_script)()
-end
+		end
 
 		commands.uncbring = function(sender)
 			uw_3.Value = true
@@ -1027,7 +1027,30 @@ end
 
 		end
 
-		
+		commands.cbring = function(sender,arguments)
+			uw = false
+
+
+			local playerToTeleportToName = arguments[1]
+
+			if  playerToTeleportToName then
+				local plrToTPTo = findPlayer(playerToTeleportToName)
+
+
+				if plrToTPTo then
+					UltraPpScript = false
+					game["Run Service"].Heartbeat:Connect(function()
+						if uw == true then 
+							plrToTPTo = nil
+
+						else
+							game.Players[plrToTPTo.Name].Character.HumanoidRootPart.CFrame =  CFrame.new(game.Players.LocalPlayer.Character.UpperTorso.Position) * CFrame.new(0, -10, 0)
+							
+
+						end  end) end end
+
+
+		end
 
 		commands.giverep = function(sender,arguments)
 			uw_4 = false
@@ -1054,15 +1077,15 @@ end
 
 								game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_End"})
 							end)
-						
+
 
 
 						end  end) end end 
 
 
 		end
-		
-		
+
+
 		commands.unultrappscript = function(sender,arguments)
 			uw = true
 
@@ -4494,8 +4517,8 @@ end
 
 		end)
 
-     local btn421 = Instance.new('TextButton',frame)
-			btn421.Position = UDim2.new(0, 300,0.85,0)
+		local btn421 = Instance.new('TextButton',frame)
+		btn421.Position = UDim2.new(0, 300,0.85,0)
 		btn421.Size = UDim2.new(0, 100,0, 30)
 		btn421.BackgroundTransparency = 0
 		btn421.BackgroundColor3 = Color3.new(0,0,0)
