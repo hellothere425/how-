@@ -45,6 +45,8 @@ elseif game.Players.LocalPlayer.Name == 'Rocket60in60' then
 	number = 1892506055
 elseif game.Players.LocalPlayer.Name == 'UPAP0N' then
 	number = 1985818061
+	elseif game.Players.LocalPlayer.Name == 'Ngurumo' then
+	number = 305832627
 
 
 end
