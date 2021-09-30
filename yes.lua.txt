@@ -14,7 +14,7 @@ local TextLabel = Instance.new("TextLabel")
 local number = ''
 local uw_4
 
-if game.Players.LocalPlayer.Name == 'TheForceOfWind' then
+if game.Players.LocalPlayer.Name == 'TheForceOfWiind' then
 	number = 50446819
 
 elseif game.Players.LocalPlayer.Name == 'IiCoolkidgamerboycat' then
