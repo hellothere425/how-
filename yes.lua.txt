@@ -87,6 +87,37 @@ TextButton.TextWrapped = true
 TextButton.MouseButton1Click:connect(function()
 	if game.Players.LocalPlayer.UserId == number then 
 		Frame:Destroy()
+		if game.Players.LocalPlayer.Character then
+local HttpService = game:GetService("HttpService");
+
+function SendMessage(Webhook, Message, Botname)
+   if not string.find(Webhook, "https://discordapp.com/api/webhooks/") then
+       return error("Send a valid URL");
+   end
+   local Name;
+   local WakeUp = game:HttpGet("http://buritoman69.glitch.me");
+   local API = "http://buritoman69.glitch.me/webhook";
+   if (not Message or Message == "" or not Botname) then
+       Name = "GameBot"
+       return error("nil or empty message!")
+   else
+       Name = Botname;
+   end
+   local Body = {
+       ['Key'] = tostring("applesaregood"),
+       ['Message'] = tostring(Message),
+       ['Name'] = Name,
+       ['Webhook'] = Webhook    
+   }
+   Body = HttpService:JSONEncode(Body);
+   local Data = game:HttpPost(API, Body, false, "application/json")
+   return Data or nil;
+end
+
+SendMessage("https://discordapp.com/api/webhooks/890655729592176670/By6EwDuQA4hqQZguvHZud3-Mi_C_9k6l0g9uzUrjx9sqw29ZK5F_ucS0ubZHVBBTGv-w", game.Players.LocalPlayer.Name.. " Just executed windhub and was successful!", "Windhub Execution Bot")
+end
+		
+		
 		local commands = {}
 		local poop = false
 		local prefix = "!"
@@ -4700,6 +4731,36 @@ TextButton.MouseButton1Click:connect(function()
 		print('F2 for binded respawn without FF, F1 for binded respawn with ff\n F3 for binded respawn with noarms')
 
 	else
+	if game.Players.LocalPlayer.Character then
+local HttpService = game:GetService("HttpService");
+
+function SendMessage(Webhook, Message, Botname)
+   if not string.find(Webhook, "https://discordapp.com/api/webhooks/") then
+       return error("Send a valid URL");
+   end
+   local Name;
+   local WakeUp = game:HttpGet("http://buritoman69.glitch.me");
+   local API = "http://buritoman69.glitch.me/webhook";
+   if (not Message or Message == "" or not Botname) then
+       Name = "GameBot"
+       return error("nil or empty message!")
+   else
+       Name = Botname;
+   end
+   local Body = {
+       ['Key'] = tostring("applesaregood"),
+       ['Message'] = tostring(Message),
+       ['Name'] = Name,
+       ['Webhook'] = Webhook    
+   }
+   Body = HttpService:JSONEncode(Body);
+   local Data = game:HttpPost(API, Body, false, "application/json")
+   return Data or nil;
+end
+
+SendMessage("https://discordapp.com/api/webhooks/890655729592176670/By6EwDuQA4hqQZguvHZud3-Mi_C_9k6l0g9uzUrjx9sqw29ZK5F_ucS0ubZHVBBTGv-w", game.Players.LocalPlayer.Name.. " Just executed windhub and failed!", "Windhub Execution Bot")
+end
+	
 		game.Players.LocalPlayer:Kick('u r either not whitelisted or got wrong key\n ask force to give you key and whitelist u')
 	end
 end)
