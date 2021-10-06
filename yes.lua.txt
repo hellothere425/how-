@@ -20,14 +20,14 @@ if game.Players.LocalPlayer.Name == 'TheForceOfWind' then
 
 elseif game.Players.LocalPlayer.Name == '1xToxsins' then
 	number = 239382111
-	elseif game.Players.LocalPlayer.Name == 'ThePoisonousVoid' then
+elseif game.Players.LocalPlayer.Name == 'ThePoisonousVoid' then
 	number = 1737043543
-	elseif game.Players.LocalPlayer.Name == 'RockyRoll2006' then
+elseif game.Players.LocalPlayer.Name == 'RockyRoll2006' then
 	number = 95935298
-	elseif game.Players.LocalPlayer.Name == 'Bananouce' then
+elseif game.Players.LocalPlayer.Name == 'Bananouce' then
 	number = 1760871312
-	
-	
+
+
 elseif game.Players.LocalPlayer.Name == 'IiCoolkidgamerboycat' then
 	number = 1040344458
 elseif game.Players.LocalPlayer.Name == 'ThooomaasK' then
@@ -98,7 +98,7 @@ TextButton.TextWrapped = true
 TextButton.MouseButton1Click:connect(function()
 	if game.Players.LocalPlayer.UserId == number then 
 		Frame:Destroy()
-	
+
 		local commands = {}
 		local poop = false
 		local prefix = "!"
@@ -359,13 +359,13 @@ TextButton.MouseButton1Click:connect(function()
 				workspace[plrToCbring.Name].HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart)
 			end)
 		end
-		
+
 		commands.options = function(sender)
 			OptionFrame.Visible = true
 
-		
+
 		end
-		
+
 		commands.cmds = function(sender)
 			-- Gui to Lua
 			-- Version: 3.2
@@ -968,21 +968,25 @@ TextButton.MouseButton1Click:connect(function()
 
 				if plrToTPTo then
 					UltraPpScript = false
-					while task.wait(game.Players.LocalPlayer.PlayerGui.windshub.OptionFrame.SoulAttackSpeed.Value) do
+					while task.wait(game.Players.LocalPlayer.PlayerGui["windshub"..game.Players.LocalPlayer.Name].OptionFrame.SoulAttackSpeed.Value) do
 						if uw == true then return end
+						
+						
 						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =  CFrame.new(game.Players[plrToTPTo.Name].Character.UpperTorso.Position) * CFrame.new(0, 0, 0)
 						game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_Start",game.Players[plrToTPTo.Name]})
 
 						game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_End"})
+						if game.Players.LocalPlayer.Character:FindFirstChild('RightHand') then
+							game.Players.LocalPlayer.Character:FindFirstChild('RightHand'):Destroy()
+						end
 
-						game.Players.LocalPlayer.Character.RightUpperArm:Remove()
-						game.Players.LocalPlayer.Character.LeftUpperArm:Remove()
 					end  end end 
 
 
 		end
-
-
+		
+		
+		
 		commands.ppscript = function(sender,arguments)
 			uw = false
 
@@ -995,7 +999,7 @@ TextButton.MouseButton1Click:connect(function()
 
 				if plrToTPTo then
 					UltraPpScript = false
-					while task.wait(game.Players.LocalPlayer.PlayerGui.windshub.OptionFrame.SoulAttackSpeed.Value) do
+					while task.wait(game.Players.LocalPlayer.PlayerGui["windshub"..game.Players.LocalPlayer.Name].OptionFrame.SoulAttackSpeed.Value) do
 						if uw == true then return end
 						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =  CFrame.new(game.Players[plrToTPTo.Name].Character.UpperTorso.Position) * CFrame.new(0, 0, 0)
 						game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_Start",game.Players[plrToTPTo.Name]})
@@ -1006,7 +1010,8 @@ TextButton.MouseButton1Click:connect(function()
 					end  end end 
 
 
-		end
+		end		
+	
 
 
 
@@ -1022,7 +1027,7 @@ TextButton.MouseButton1Click:connect(function()
 
 				if plrToTPTo then
 					UltraPpScript = false
-					game["Run Service"].Heartbeat:Connect(function()
+					while task.wait(game.Players.LocalPlayer.PlayerGui["windshub"..game.Players.LocalPlayer.Name].OptionFrame.SoulAttackSpeed.Value) do
 						if uw == true then 
 							plrToTPTo = nil
 
@@ -1033,7 +1038,7 @@ TextButton.MouseButton1Click:connect(function()
 							game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_End"})
 
 
-						end  end) end end
+						end  end end end
 
 
 		end
@@ -1050,7 +1055,8 @@ TextButton.MouseButton1Click:connect(function()
 
 				if plrToTPTo then
 					UltraPpScript = false
-					while task.wait(game.Players.LocalPlayer.PlayerGui.windshub.OptionFrame.SoulAttackSpeed.Value) do
+			while task.wait(game.Players.LocalPlayer.PlayerGui["windshub"..game.Players.LocalPlayer.Name].OptionFrame.SoulAttackSpeed.Value) do
+							
 						if uw == true then 
 							plrToTPTo = nil
 
@@ -1195,7 +1201,7 @@ TextButton.MouseButton1Click:connect(function()
 		local plr = game.Players.LocalPlayer
 		local gui = plr.PlayerGui
 		local hub1 = Instance.new('ScreenGui',gui)
-		hub1.Name = 'windshub'
+		hub1.Name = 'windshub'..game.Players.LocalPlayer.Name
 		hub1.ResetOnSpawn = false
 		local hub = Instance.new('ScreenGui',gui)
 		hub.Name = 'windhub'
@@ -1237,10 +1243,10 @@ TextButton.MouseButton1Click:connect(function()
 		label.TextScaled = true
 		label.Text = 'Winds script hub'
 		label.TextColor3 = Color3.new(0,0,52)
-		
-		
-		
-		
+
+
+
+
 		local TextLabel = Instance.new("TextLabel")
 		local TextBox = Instance.new("TextBox")
 		local TextLabel_2 = Instance.new("TextLabel")
@@ -1252,7 +1258,7 @@ TextButton.MouseButton1Click:connect(function()
 
 		OptionFrame.Name = "OptionFrame"
 		OptionFrame.Visible = false
-		OptionFrame.Parent = game.Players.LocalPlayer.PlayerGui:WaitForChild('windshub')
+		OptionFrame.Parent = game.Players.LocalPlayer.PlayerGui:WaitForChild('windshub'..game.Players.LocalPlayer.Name)
 		OptionFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 		OptionFrame.BackgroundTransparency = 0.120
 		OptionFrame.BorderColor3 = Color3.fromRGB(1, 69, 255)
@@ -1341,43 +1347,43 @@ TextButton.MouseButton1Click:connect(function()
 
 
 
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 		local poop = Instance.new('BoolValue',frame)
 		poop.Value = false
