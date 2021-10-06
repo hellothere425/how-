@@ -17,6 +17,17 @@ local OptionFrame = Instance.new("Frame")
 if game.Players.LocalPlayer.Name == 'TheForceOfWind' then
 	number = 50446819
 
+
+elseif game.Players.LocalPlayer.Name == '1xToxsins' then
+	number = 239382111
+	elseif game.Players.LocalPlayer.Name == 'ThePoisonousVoid' then
+	number = 1737043543
+	elseif game.Players.LocalPlayer.Name == 'RockyRoll2006' then
+	number = 95935298
+	elseif game.Players.LocalPlayer.Name == 'Bananouce' then
+	number = 1760871312
+	
+	
 elseif game.Players.LocalPlayer.Name == 'IiCoolkidgamerboycat' then
 	number = 1040344458
 elseif game.Players.LocalPlayer.Name == 'ThooomaasK' then
