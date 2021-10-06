@@ -970,8 +970,8 @@ TextButton.MouseButton1Click:connect(function()
 					UltraPpScript = false
 					while task.wait(game.Players.LocalPlayer.PlayerGui["windshub"..game.Players.LocalPlayer.Name].OptionFrame.SoulAttackSpeed.Value) do
 						if uw == true then return end
-						
-						
+
+
 						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =  CFrame.new(game.Players[plrToTPTo.Name].Character.UpperTorso.Position) * CFrame.new(0, 0, 0)
 						game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_Start",game.Players[plrToTPTo.Name]})
 
@@ -984,9 +984,9 @@ TextButton.MouseButton1Click:connect(function()
 
 
 		end
-		
-		
-		
+
+
+
 		commands.ppscript = function(sender,arguments)
 			uw = false
 
@@ -1011,7 +1011,7 @@ TextButton.MouseButton1Click:connect(function()
 
 
 		end		
-	
+
 
 
 
@@ -1055,8 +1055,8 @@ TextButton.MouseButton1Click:connect(function()
 
 				if plrToTPTo then
 					UltraPpScript = false
-			while task.wait(game.Players.LocalPlayer.PlayerGui["windshub"..game.Players.LocalPlayer.Name].OptionFrame.SoulAttackSpeed.Value) do
-							
+					while task.wait(game.Players.LocalPlayer.PlayerGui["windshub"..game.Players.LocalPlayer.Name].OptionFrame.SoulAttackSpeed.Value) do
+
 						if uw == true then 
 							plrToTPTo = nil
 
@@ -4598,437 +4598,437 @@ TextButton.MouseButton1Click:connect(function()
 		btn425.BorderColor3 = Color3.new(0,0,52)
 		btn425.MouseButton1Click:Connect(function()
 
-							game["Run Service"].RenderStepped:Connect(function()
-local args = {
-    [1] = {
-        [1] = "+FS6"
-    }
-}
-game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
-end)
-
-
-		
-		end)
-		end)
-
-
-		local btn426 = Instance.new('TextButton',frame)
-		btn426.Position = UDim2.new(0, 450,0.6,0)
-		btn426.Size = UDim2.new(0, 200,0, 60)
-		btn426.BackgroundTransparency = 0
-		btn426.BackgroundColor3 = Color3.new(0,0,0)
-		btn426.TextScaled = true
-		btn426.Text = '[ULTRA RARE SCRIPT] x1.3+ PSYCHIC' 
-		btn426.TextColor3 = Color3.new(1,0,0.49)
-		btn426.BorderSizePixel = 3
-		btn426.BorderColor3 = Color3.new(0,0,52)
-		btn426.MouseButton1Click:Connect(function()
-
-					game["Run Service"].RenderStepped:Connect(function()
-local args = {
-    [1] = {
-        [1] = "+PP6"
-    }
-}
-game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
-end)
-
-
-		
-		end)
-
-
-
-
-
-		local btn421 = Instance.new('TextButton',frame)
-		btn421.Position = UDim2.new(0, 135,0.9,0)
-		btn421.Size = UDim2.new(0, 100,0, 30)
-		btn421.BackgroundTransparency = 0
-		btn421.BackgroundColor3 = Color3.new(0,0,0)
-		btn421.TextScaled = true
-		btn421.Text = 'Binded Respawn W/O ff and arms' 
-		btn421.TextColor3 = Color3.new(0,0,52)
-		btn421.BorderSizePixel = 3
-		btn421.BorderColor3 = Color3.new(0,0,52)
-		btn421.MouseButton1Click:Connect(function()
-			btn421.TextColor3 = Color3.new(1,0,0)
-			local UIS = game:GetService("UserInputService")
-			UIS.InputBegan:Connect(function(input,isTyping)
-				if isTyping then
-					return
-				elseif input.KeyCode == Enum.KeyCode.F3 then
-					local j = game.Players.LocalPlayer.Character:GetPrimaryPartCFrame()
-					game.ReplicatedStorage.RemoteEvent:FireServer({"Respawn"})
-					wait(2)
-					game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(j)
-					wait()
-					game.Players.LocalPlayer.Character:FindFirstChild('ForceField'):Destroy()
-					game.Players.LocalPlayer.Character.RightHand:Remove()
-					game.Players.LocalPlayer.Character.LeftHand:Remove()
-				end
+			game["Run Service"].RenderStepped:Connect(function()
+				local args = {
+					[1] = {
+						[1] = "+FS6"
+					}
+				}
+				game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
 			end)
 
+
+
 		end)
-
-		local btn421 = Instance.new('TextButton',frame)
-		btn421.Position = UDim2.new(0, 300,0.85,0)
-		btn421.Size = UDim2.new(0, 100,0, 30)
-		btn421.BackgroundTransparency = 0
-		btn421.BackgroundColor3 = Color3.new(0,0,0)
-		btn421.TextScaled = true
-		btn421.Text = 'Chat translate' 
-		btn421.TextColor3 = Color3.new(0,0,52)
-		btn421.BorderSizePixel = 3
-		btn421.BorderColor3 = Color3.new(0,0,52)
-		btn421.MouseButton1Click:Connect(function()
-			loadstring(game:HttpGetAsync('https://i.qts.life/r/ChatInlineTranslator.lua', true))()
-		end)
-
-		local btn422 = Instance.new('TextButton',frame)
-		btn422.Position = UDim2.new(0, 200,0.95,0)
-		btn422.Size = UDim2.new(0, 200,0, 30)
-		btn422.BackgroundTransparency = 0
-		btn422.BackgroundColor3 = Color3.new(0,0,0)
-		btn422.TextScaled = true
-		btn422.Text = 'weld to torp' 
-		btn422.TextColor3 = Color3.new(0,0,52)
-		btn422.BorderSizePixel = 3
-		btn422.BorderColor3 = Color3.new(0,0,52)
-		btn422.MouseButton1Click:Connect(function()
-			btn421.TextColor3 = Color3.new(1,0,0)
-			local weld = Instance.new('Weld')
-			Weld.Part0 = workspace.PotatoKillerHD21
-			Weld.Part1 = workspace.Broodje_Eend
-		end)
-		local RunService=game:GetService('RunService')
-		RunService.Heartbeat:Connect(function()
-
-			pcall(function()
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players[btn3.Text].Character.UpperTorso.Position)
-				game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_Start",game.Players[btn3.Text]})
-				game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_End"})
+	
 
 
-				local playertokill = btn5.Text
+local btn426 = Instance.new('TextButton',frame)
+btn426.Position = UDim2.new(0, 450,0.6,0)
+btn426.Size = UDim2.new(0, 200,0, 60)
+btn426.BackgroundTransparency = 0
+btn426.BackgroundColor3 = Color3.new(0,0,0)
+btn426.TextScaled = true
+btn426.Text = '[ULTRA RARE SCRIPT] x1.3+ PSYCHIC' 
+btn426.TextColor3 = Color3.new(1,0,0.49)
+btn426.BorderSizePixel = 3
+btn426.BorderColor3 = Color3.new(0,0,52)
+btn426.MouseButton1Click:Connect(function()
 
-
-
-				while wait(2) do
-					if playertokill then
-
-						wait()
-						game.ReplicatedStorage.RemoteEvent:FireServer({"Respawn"})
-						local player = game.Players.LocalPlayer
-						local cmdlp = game.Players.LocalPlayer
-						local cmdp = game:GetService("Players")
-						local cmdl = game:GetService("Lighting")
-						local cmdrs = game:GetService("ReplicatedStorage")
-						local cmdrs2 = game:GetService("RunService")
-						local cmdts = game:GetService("TweenService")
-						local cmdvu = game:GetService("VirtualUser")
-						local cmduis = game:GetService("UserInputService")
-						local Mouses = cmdlp:GetMouse()
-
-
-						local function findplr(args)
-							if args == "me" then
-								return cmdlp
-							elseif args == "random" then 
-								return cmdp:GetPlayers()[math.random(1,#cmdp:GetPlayers())]
-							elseif args == "new" then
-								local vAges = {} 
-								for _,v in pairs(cmdp:GetPlayers()) do
-									if v.AccountAge < 30 and v ~= cmdlp then
-										vAges[#vAges+1] = v
-									end
-								end
-								return vAges[math.random(1,#vAges)]
-							elseif args == "old" then
-								local vAges = {} 
-								for _,v in pairs(cmdp:GetPlayers()) do
-									if v.AccountAge > 30 and v ~= cmdlp then
-										vAges[#vAges+1] = v
-									end
-								end
-								return vAges[math.random(1,#vAges)]
-							elseif args == "bacon" then
-								local vAges = {} 
-								for _,v in pairs(cmdp:GetPlayers()) do
-									if v.Character:FindFirstChild("Pal Hair") or v.Character:FindFirstChild("Kate Hair") and v ~= cmdlp then
-										vAges[#vAges+1] = v
-									end
-								end
-								return vAges[math.random(1,#vAges)]
-							elseif args == "friend" then
-								local vAges = {} 
-								for _,v in pairs(cmdp:GetPlayers()) do
-									if v:IsFriendsWith(cmdlp.UserId) and v ~= cmdlp then
-										vAges[#vAges+1] = v
-									end
-								end
-								return vAges[math.random(1,#vAges)]
-							elseif args == "notfriend" then
-								local vAges = {} 
-								for _,v in pairs(cmdp:GetPlayers()) do
-									if not v:IsFriendsWith(cmdlp.UserId) and v ~= cmdlp then
-										vAges[#vAges+1] = v
-									end
-								end
-								return vAges[math.random(1,#vAges)]
-							elseif args == "ally" then
-								local vAges = {} 
-								for _,v in pairs(cmdp:GetPlayers()) do
-									if v.Team == cmdlp.Team and v ~= cmdlp then
-										vAges[#vAges+1] = v
-									end
-								end
-								return vAges[math.random(1,#vAges)]
-							elseif args == "enemy" then
-								local vAges = {} 
-								for _,v in pairs(cmdp:GetPlayers()) do
-									if v.Team ~= cmdlp.Team then
-										vAges[#vAges+1] = v
-									end
-								end
-								return vAges[math.random(1,#vAges)]
-							elseif args == "near" then
-								local vAges = {} 
-								for _,v in pairs(cmdp:GetPlayers()) do
-									if v ~= cmdlp then
-										local math = (v.Character:FindFirstChild("HumanoidRootPart").Position - cmdlp.Character.HumanoidRootPart.Position).magnitude
-										if math < 30 then
-											vAges[#vAges+1] = v
-										end
-									end
-								end
-								return vAges[math.random(1,#vAges)]
-							elseif args == "far" then
-								local vAges = {} 
-								for _,v in pairs(cmdp:GetPlayers()) do
-									if v ~= cmdlp then
-										local math = (v.Character:FindFirstChild("HumanoidRootPart").Position - cmdlp.Character.HumanoidRootPart.Position).magnitude
-										if math > 30 then
-											vAges[#vAges+1] = v
-										end
-									end
-								end
-								return vAges[math.random(1,#vAges)]
-							else 
-								for _,v in pairs(cmdp:GetPlayers()) do
-									if string.find(string.lower(v.Name),string.lower(args)) then
-										return v
-									end
-								end
-							end
-						end
-
-						local target = findplr(playertokill or cmdlp.Name)
-						if not target then
-							warn("*","Player does not exist!")
-							return
-						end
-						cmdlp.Character.Humanoid.Name = 1
-						local l = cmdlp.Character["1"]:Clone()
-						l.Parent = cmdlp.Character
-						l.Name = "Humanoid"
-						wait(.2)
-						cmdlp.Character["1"]:Destroy()
-						workspace.CurrentCamera.CameraSubject = cmdlp.Character
-						cmdlp.Character.Humanoid.DisplayDistanceType = "None"
-						cmdlp.Character.Humanoid:UnequipTools()
-						local v = cmdlp.Backpack:FindFirstChildOfClass("Tool")
-						if not v then
-							warn("*","Tool not found!")
-							return
-						end
-						v.Parent = cmdlp.Character
-						v.Parent = cmdlp.Character.HumanoidRootPart
-						firetouchinterest(target.Character.HumanoidRootPart, v.Handle, 0)
-						firetouchinterest(target.Character.HumanoidRootPart, v.Handle, 1)
-						pcall(function() cmdlp.Character.HumanoidRootPart.CFrame = CFrame.new(0, workspace.FallenPartsDestroyHeight + 5, 0) end)
-						wait(.3)
-						cmdlp.Character:Remove()
-						cmdlp.CharacterAdded:Wait()
-
-					end
-				end
-
-
-
-				wait(0)
-			end)
-		end)
-	end
-	print('F2 for binded respawn without FF, F1 for binded respawn with ff\n F3 for binded respawn with noarms')
-
-
-	if game.Players.LocalPlayer.UserId ~= number then
-		game.Players.LocalPlayer:Kick('u r either not whitelisted or got wrong key\n ask force to give you key and whitelist u')
-	end
-
-
-
-
-	TextLabel.Parent = Frame
-	TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	TextLabel.BackgroundTransparency = 1.000
-	TextLabel.Position = UDim2.new(0.0570401922, 0, 0.0265682787, 0)
-	TextLabel.Size = UDim2.new(0, 389, 0, 106)
-	TextLabel.Font = Enum.Font.SourceSans
-	TextLabel.Text = "Windshub V1. whitelist system"
-	TextLabel.TextColor3 = Color3.fromRGB(255, 217, 2)
-	TextLabel.TextScaled = true
-	TextLabel.TextSize = 14.000
-	TextLabel.TextWrapped = true
-	local playertokill = game.Players.LocalPlayer:WaitForChild('PlayerGui'):WaitForChild('windhub').windhubf.btn5.Text
-	game.Players.LocalPlayer.PlayerGui:WaitForChild('windhub').windhubf.btn5.Changed:Connect(function()
-		playertokill = game.Players.LocalPlayer.PlayerGui:WaitForChild('windhub').windhubf.btn5.Text
+	game["Run Service"].RenderStepped:Connect(function()
+		local args = {
+			[1] = {
+				[1] = "+PP6"
+			}
+		}
+		game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
 	end)
 
 
 
+end)
 
 
-	local Imput = game:GetService("UserInputService")
-	Imput.InputBegan:connect(function(inst)
-
-		if inst.KeyCode == Enum.KeyCode.F4 then
-			wait()
-
-			local player = game.Players.LocalPlayer
-			local cmdlp = game.Players.LocalPlayer
-			local cmdp = game:GetService("Players")
-			local cmdl = game:GetService("Lighting")
-			local cmdrs = game:GetService("ReplicatedStorage")
-			local cmdrs2 = game:GetService("RunService")
-			local cmdts = game:GetService("TweenService")
-			local cmdvu = game:GetService("VirtualUser")
-			local cmduis = game:GetService("UserInputService")
-			local Mouses = cmdlp:GetMouse()
 
 
-			function findplr(args)
-				if args == "me" then
-					return cmdlp
-				elseif args == "random" then 
-					return cmdp:GetPlayers()[math.random(1,#cmdp:GetPlayers())]
-				elseif args == "new" then
-					local vAges = {} 
-					for _,v in pairs(cmdp:GetPlayers()) do
-						if v.AccountAge < 30 and v ~= cmdlp then
-							vAges[#vAges+1] = v
-						end
-					end
-					return vAges[math.random(1,#vAges)]
-				elseif args == "old" then
-					local vAges = {} 
-					for _,v in pairs(cmdp:GetPlayers()) do
-						if v.AccountAge > 30 and v ~= cmdlp then
-							vAges[#vAges+1] = v
-						end
-					end
-					return vAges[math.random(1,#vAges)]
-				elseif args == "bacon" then
-					local vAges = {} 
-					for _,v in pairs(cmdp:GetPlayers()) do
-						if v.Character:FindFirstChild("Pal Hair") or v.Character:FindFirstChild("Kate Hair") and v ~= cmdlp then
-							vAges[#vAges+1] = v
-						end
-					end
-					return vAges[math.random(1,#vAges)]
-				elseif args == "friend" then
-					local vAges = {} 
-					for _,v in pairs(cmdp:GetPlayers()) do
-						if v:IsFriendsWith(cmdlp.UserId) and v ~= cmdlp then
-							vAges[#vAges+1] = v
-						end
-					end
-					return vAges[math.random(1,#vAges)]
-				elseif args == "notfriend" then
-					local vAges = {} 
-					for _,v in pairs(cmdp:GetPlayers()) do
-						if not v:IsFriendsWith(cmdlp.UserId) and v ~= cmdlp then
-							vAges[#vAges+1] = v
-						end
-					end
-					return vAges[math.random(1,#vAges)]
-				elseif args == "ally" then
-					local vAges = {} 
-					for _,v in pairs(cmdp:GetPlayers()) do
-						if v.Team == cmdlp.Team and v ~= cmdlp then
-							vAges[#vAges+1] = v
-						end
-					end
-					return vAges[math.random(1,#vAges)]
-				elseif args == "enemy" then
-					local vAges = {} 
-					for _,v in pairs(cmdp:GetPlayers()) do
-						if v.Team ~= cmdlp.Team then
-							vAges[#vAges+1] = v
-						end
-					end
-					return vAges[math.random(1,#vAges)]
-				elseif args == "near" then
-					local vAges = {} 
-					for _,v in pairs(cmdp:GetPlayers()) do
-						if v ~= cmdlp then
-							local math = (v.Character:FindFirstChild("HumanoidRootPart").Position - cmdlp.Character.HumanoidRootPart.Position).magnitude
-							if math < 30 then
-								vAges[#vAges+1] = v
-							end
-						end
-					end
-					return vAges[math.random(1,#vAges)]
-				elseif args == "far" then
-					local vAges = {} 
-					for _,v in pairs(cmdp:GetPlayers()) do
-						if v ~= cmdlp then
-							local math = (v.Character:FindFirstChild("HumanoidRootPart").Position - cmdlp.Character.HumanoidRootPart.Position).magnitude
-							if math > 30 then
-								vAges[#vAges+1] = v
-							end
-						end
-					end
-					return vAges[math.random(1,#vAges)]
-				else 
-					for _,v in pairs(cmdp:GetPlayers()) do
-						if string.find(string.lower(v.Name),string.lower(args)) then
-							return v
-						end
-					end
-				end
-			end
 
-			local target = findplr(playertokill or cmdlp.Name)
-			if not target then
-				warn("*","Player does not exist!")
-				return
-			end
-			cmdlp.Character.Humanoid.Name = 1
-			local l = cmdlp.Character["1"]:Clone()
-			l.Parent = cmdlp.Character
-			l.Name = "Humanoid"
-			wait(.2)
-			cmdlp.Character["1"]:Destroy()
-			workspace.CurrentCamera.CameraSubject = cmdlp.Character
-			cmdlp.Character.Humanoid.DisplayDistanceType = "None"
-			cmdlp.Character.Humanoid:UnequipTools()
-			local v = cmdlp.Backpack:FindFirstChildOfClass("Tool")
-			if not v then
-				warn("*","Tool not found!")
-				return
-			end
-			v.Parent = cmdlp.Character
-			v.Parent = cmdlp.Character.HumanoidRootPart
+local btn421 = Instance.new('TextButton',frame)
+btn421.Position = UDim2.new(0, 135,0.9,0)
+btn421.Size = UDim2.new(0, 100,0, 30)
+btn421.BackgroundTransparency = 0
+btn421.BackgroundColor3 = Color3.new(0,0,0)
+btn421.TextScaled = true
+btn421.Text = 'Binded Respawn W/O ff and arms' 
+btn421.TextColor3 = Color3.new(0,0,52)
+btn421.BorderSizePixel = 3
+btn421.BorderColor3 = Color3.new(0,0,52)
+btn421.MouseButton1Click:Connect(function()
+	btn421.TextColor3 = Color3.new(1,0,0)
+	local UIS = game:GetService("UserInputService")
+	UIS.InputBegan:Connect(function(input,isTyping)
+		if isTyping then
+			return
+		elseif input.KeyCode == Enum.KeyCode.F3 then
+			local j = game.Players.LocalPlayer.Character:GetPrimaryPartCFrame()
 			game.ReplicatedStorage.RemoteEvent:FireServer({"Respawn"})
-			firetouchinterest(target.Character.HumanoidRootPart, v.Handle, 0)
-			firetouchinterest(target.Character.HumanoidRootPart, v.Handle, 1)
-			pcall(function() cmdlp.Character.HumanoidRootPart.CFrame = CFrame.new(0, workspace.FallenPartsDestroyHeight + 5, 0) end)
-			wait(.3)
-			cmdlp.Character:Remove()
-			cmdlp.CharacterAdded:Wait()
+			wait(2)
+			game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(j)
+			wait()
+			game.Players.LocalPlayer.Character:FindFirstChild('ForceField'):Destroy()
+			game.Players.LocalPlayer.Character.RightHand:Remove()
+			game.Players.LocalPlayer.Character.LeftHand:Remove()
 		end
 	end)
+
+end)
+
+local btn421 = Instance.new('TextButton',frame)
+btn421.Position = UDim2.new(0, 300,0.85,0)
+btn421.Size = UDim2.new(0, 100,0, 30)
+btn421.BackgroundTransparency = 0
+btn421.BackgroundColor3 = Color3.new(0,0,0)
+btn421.TextScaled = true
+btn421.Text = 'Chat translate' 
+btn421.TextColor3 = Color3.new(0,0,52)
+btn421.BorderSizePixel = 3
+btn421.BorderColor3 = Color3.new(0,0,52)
+btn421.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGetAsync('https://i.qts.life/r/ChatInlineTranslator.lua', true))()
+end)
+
+local btn422 = Instance.new('TextButton',frame)
+btn422.Position = UDim2.new(0, 200,0.95,0)
+btn422.Size = UDim2.new(0, 200,0, 30)
+btn422.BackgroundTransparency = 0
+btn422.BackgroundColor3 = Color3.new(0,0,0)
+btn422.TextScaled = true
+btn422.Text = 'weld to torp' 
+btn422.TextColor3 = Color3.new(0,0,52)
+btn422.BorderSizePixel = 3
+btn422.BorderColor3 = Color3.new(0,0,52)
+btn422.MouseButton1Click:Connect(function()
+	btn421.TextColor3 = Color3.new(1,0,0)
+	local weld = Instance.new('Weld')
+	Weld.Part0 = workspace.PotatoKillerHD21
+	Weld.Part1 = workspace.Broodje_Eend
+end)
+local RunService=game:GetService('RunService')
+RunService.Heartbeat:Connect(function()
+
+	pcall(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players[btn3.Text].Character.UpperTorso.Position)
+		game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_Start",game.Players[btn3.Text]})
+		game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_End"})
+
+
+		local playertokill = btn5.Text
+
+
+
+		while wait(2) do
+			if playertokill then
+
+				wait()
+				game.ReplicatedStorage.RemoteEvent:FireServer({"Respawn"})
+				local player = game.Players.LocalPlayer
+				local cmdlp = game.Players.LocalPlayer
+				local cmdp = game:GetService("Players")
+				local cmdl = game:GetService("Lighting")
+				local cmdrs = game:GetService("ReplicatedStorage")
+				local cmdrs2 = game:GetService("RunService")
+				local cmdts = game:GetService("TweenService")
+				local cmdvu = game:GetService("VirtualUser")
+				local cmduis = game:GetService("UserInputService")
+				local Mouses = cmdlp:GetMouse()
+
+
+				local function findplr(args)
+					if args == "me" then
+						return cmdlp
+					elseif args == "random" then 
+						return cmdp:GetPlayers()[math.random(1,#cmdp:GetPlayers())]
+					elseif args == "new" then
+						local vAges = {} 
+						for _,v in pairs(cmdp:GetPlayers()) do
+							if v.AccountAge < 30 and v ~= cmdlp then
+								vAges[#vAges+1] = v
+							end
+						end
+						return vAges[math.random(1,#vAges)]
+					elseif args == "old" then
+						local vAges = {} 
+						for _,v in pairs(cmdp:GetPlayers()) do
+							if v.AccountAge > 30 and v ~= cmdlp then
+								vAges[#vAges+1] = v
+							end
+						end
+						return vAges[math.random(1,#vAges)]
+					elseif args == "bacon" then
+						local vAges = {} 
+						for _,v in pairs(cmdp:GetPlayers()) do
+							if v.Character:FindFirstChild("Pal Hair") or v.Character:FindFirstChild("Kate Hair") and v ~= cmdlp then
+								vAges[#vAges+1] = v
+							end
+						end
+						return vAges[math.random(1,#vAges)]
+					elseif args == "friend" then
+						local vAges = {} 
+						for _,v in pairs(cmdp:GetPlayers()) do
+							if v:IsFriendsWith(cmdlp.UserId) and v ~= cmdlp then
+								vAges[#vAges+1] = v
+							end
+						end
+						return vAges[math.random(1,#vAges)]
+					elseif args == "notfriend" then
+						local vAges = {} 
+						for _,v in pairs(cmdp:GetPlayers()) do
+							if not v:IsFriendsWith(cmdlp.UserId) and v ~= cmdlp then
+								vAges[#vAges+1] = v
+							end
+						end
+						return vAges[math.random(1,#vAges)]
+					elseif args == "ally" then
+						local vAges = {} 
+						for _,v in pairs(cmdp:GetPlayers()) do
+							if v.Team == cmdlp.Team and v ~= cmdlp then
+								vAges[#vAges+1] = v
+							end
+						end
+						return vAges[math.random(1,#vAges)]
+					elseif args == "enemy" then
+						local vAges = {} 
+						for _,v in pairs(cmdp:GetPlayers()) do
+							if v.Team ~= cmdlp.Team then
+								vAges[#vAges+1] = v
+							end
+						end
+						return vAges[math.random(1,#vAges)]
+					elseif args == "near" then
+						local vAges = {} 
+						for _,v in pairs(cmdp:GetPlayers()) do
+							if v ~= cmdlp then
+								local math = (v.Character:FindFirstChild("HumanoidRootPart").Position - cmdlp.Character.HumanoidRootPart.Position).magnitude
+								if math < 30 then
+									vAges[#vAges+1] = v
+								end
+							end
+						end
+						return vAges[math.random(1,#vAges)]
+					elseif args == "far" then
+						local vAges = {} 
+						for _,v in pairs(cmdp:GetPlayers()) do
+							if v ~= cmdlp then
+								local math = (v.Character:FindFirstChild("HumanoidRootPart").Position - cmdlp.Character.HumanoidRootPart.Position).magnitude
+								if math > 30 then
+									vAges[#vAges+1] = v
+								end
+							end
+						end
+						return vAges[math.random(1,#vAges)]
+					else 
+						for _,v in pairs(cmdp:GetPlayers()) do
+							if string.find(string.lower(v.Name),string.lower(args)) then
+								return v
+							end
+						end
+					end
+				end
+
+				local target = findplr(playertokill or cmdlp.Name)
+				if not target then
+					warn("*","Player does not exist!")
+					return
+				end
+				cmdlp.Character.Humanoid.Name = 1
+				local l = cmdlp.Character["1"]:Clone()
+				l.Parent = cmdlp.Character
+				l.Name = "Humanoid"
+				wait(.2)
+				cmdlp.Character["1"]:Destroy()
+				workspace.CurrentCamera.CameraSubject = cmdlp.Character
+				cmdlp.Character.Humanoid.DisplayDistanceType = "None"
+				cmdlp.Character.Humanoid:UnequipTools()
+				local v = cmdlp.Backpack:FindFirstChildOfClass("Tool")
+				if not v then
+					warn("*","Tool not found!")
+					return
+				end
+				v.Parent = cmdlp.Character
+				v.Parent = cmdlp.Character.HumanoidRootPart
+				firetouchinterest(target.Character.HumanoidRootPart, v.Handle, 0)
+				firetouchinterest(target.Character.HumanoidRootPart, v.Handle, 1)
+				pcall(function() cmdlp.Character.HumanoidRootPart.CFrame = CFrame.new(0, workspace.FallenPartsDestroyHeight + 5, 0) end)
+				wait(.3)
+				cmdlp.Character:Remove()
+				cmdlp.CharacterAdded:Wait()
+
+			end
+		end
+
+
+
+		wait(0)
+	end)
+end)
+end
+print('F2 for binded respawn without FF, F1 for binded respawn with ff\n F3 for binded respawn with noarms')
+
+
+if game.Players.LocalPlayer.UserId ~= number then
+	game.Players.LocalPlayer:Kick('u r either not whitelisted or got wrong key\n ask force to give you key and whitelist u')
+end
+
+
+
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.0570401922, 0, 0.0265682787, 0)
+TextLabel.Size = UDim2.new(0, 389, 0, 106)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Windshub V1. whitelist system"
+TextLabel.TextColor3 = Color3.fromRGB(255, 217, 2)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+local playertokill = game.Players.LocalPlayer:WaitForChild('PlayerGui'):WaitForChild('windhub').windhubf.btn5.Text
+game.Players.LocalPlayer.PlayerGui:WaitForChild('windhub').windhubf.btn5.Changed:Connect(function()
+	playertokill = game.Players.LocalPlayer.PlayerGui:WaitForChild('windhub').windhubf.btn5.Text
+end)
+
+
+
+
+
+local Imput = game:GetService("UserInputService")
+Imput.InputBegan:connect(function(inst)
+
+	if inst.KeyCode == Enum.KeyCode.F4 then
+		wait()
+
+		local player = game.Players.LocalPlayer
+		local cmdlp = game.Players.LocalPlayer
+		local cmdp = game:GetService("Players")
+		local cmdl = game:GetService("Lighting")
+		local cmdrs = game:GetService("ReplicatedStorage")
+		local cmdrs2 = game:GetService("RunService")
+		local cmdts = game:GetService("TweenService")
+		local cmdvu = game:GetService("VirtualUser")
+		local cmduis = game:GetService("UserInputService")
+		local Mouses = cmdlp:GetMouse()
+
+
+		function findplr(args)
+			if args == "me" then
+				return cmdlp
+			elseif args == "random" then 
+				return cmdp:GetPlayers()[math.random(1,#cmdp:GetPlayers())]
+			elseif args == "new" then
+				local vAges = {} 
+				for _,v in pairs(cmdp:GetPlayers()) do
+					if v.AccountAge < 30 and v ~= cmdlp then
+						vAges[#vAges+1] = v
+					end
+				end
+				return vAges[math.random(1,#vAges)]
+			elseif args == "old" then
+				local vAges = {} 
+				for _,v in pairs(cmdp:GetPlayers()) do
+					if v.AccountAge > 30 and v ~= cmdlp then
+						vAges[#vAges+1] = v
+					end
+				end
+				return vAges[math.random(1,#vAges)]
+			elseif args == "bacon" then
+				local vAges = {} 
+				for _,v in pairs(cmdp:GetPlayers()) do
+					if v.Character:FindFirstChild("Pal Hair") or v.Character:FindFirstChild("Kate Hair") and v ~= cmdlp then
+						vAges[#vAges+1] = v
+					end
+				end
+				return vAges[math.random(1,#vAges)]
+			elseif args == "friend" then
+				local vAges = {} 
+				for _,v in pairs(cmdp:GetPlayers()) do
+					if v:IsFriendsWith(cmdlp.UserId) and v ~= cmdlp then
+						vAges[#vAges+1] = v
+					end
+				end
+				return vAges[math.random(1,#vAges)]
+			elseif args == "notfriend" then
+				local vAges = {} 
+				for _,v in pairs(cmdp:GetPlayers()) do
+					if not v:IsFriendsWith(cmdlp.UserId) and v ~= cmdlp then
+						vAges[#vAges+1] = v
+					end
+				end
+				return vAges[math.random(1,#vAges)]
+			elseif args == "ally" then
+				local vAges = {} 
+				for _,v in pairs(cmdp:GetPlayers()) do
+					if v.Team == cmdlp.Team and v ~= cmdlp then
+						vAges[#vAges+1] = v
+					end
+				end
+				return vAges[math.random(1,#vAges)]
+			elseif args == "enemy" then
+				local vAges = {} 
+				for _,v in pairs(cmdp:GetPlayers()) do
+					if v.Team ~= cmdlp.Team then
+						vAges[#vAges+1] = v
+					end
+				end
+				return vAges[math.random(1,#vAges)]
+			elseif args == "near" then
+				local vAges = {} 
+				for _,v in pairs(cmdp:GetPlayers()) do
+					if v ~= cmdlp then
+						local math = (v.Character:FindFirstChild("HumanoidRootPart").Position - cmdlp.Character.HumanoidRootPart.Position).magnitude
+						if math < 30 then
+							vAges[#vAges+1] = v
+						end
+					end
+				end
+				return vAges[math.random(1,#vAges)]
+			elseif args == "far" then
+				local vAges = {} 
+				for _,v in pairs(cmdp:GetPlayers()) do
+					if v ~= cmdlp then
+						local math = (v.Character:FindFirstChild("HumanoidRootPart").Position - cmdlp.Character.HumanoidRootPart.Position).magnitude
+						if math > 30 then
+							vAges[#vAges+1] = v
+						end
+					end
+				end
+				return vAges[math.random(1,#vAges)]
+			else 
+				for _,v in pairs(cmdp:GetPlayers()) do
+					if string.find(string.lower(v.Name),string.lower(args)) then
+						return v
+					end
+				end
+			end
+		end
+
+		local target = findplr(playertokill or cmdlp.Name)
+		if not target then
+			warn("*","Player does not exist!")
+			return
+		end
+		cmdlp.Character.Humanoid.Name = 1
+		local l = cmdlp.Character["1"]:Clone()
+		l.Parent = cmdlp.Character
+		l.Name = "Humanoid"
+		wait(.2)
+		cmdlp.Character["1"]:Destroy()
+		workspace.CurrentCamera.CameraSubject = cmdlp.Character
+		cmdlp.Character.Humanoid.DisplayDistanceType = "None"
+		cmdlp.Character.Humanoid:UnequipTools()
+		local v = cmdlp.Backpack:FindFirstChildOfClass("Tool")
+		if not v then
+			warn("*","Tool not found!")
+			return
+		end
+		v.Parent = cmdlp.Character
+		v.Parent = cmdlp.Character.HumanoidRootPart
+		game.ReplicatedStorage.RemoteEvent:FireServer({"Respawn"})
+		firetouchinterest(target.Character.HumanoidRootPart, v.Handle, 0)
+		firetouchinterest(target.Character.HumanoidRootPart, v.Handle, 1)
+		pcall(function() cmdlp.Character.HumanoidRootPart.CFrame = CFrame.new(0, workspace.FallenPartsDestroyHeight + 5, 0) end)
+		wait(.3)
+		cmdlp.Character:Remove()
+		cmdlp.CharacterAdded:Wait()
+	end
+end)
 end)
