@@ -36,6 +36,12 @@ elseif game.Players.LocalPlayer.Name == 'Bananouce' then
 	number = 1760871312
 elseif game.Players.LocalPlayer.Name == 'Killerbobjoe17' then
 	number = 464889193
+elseif game.Players.LocalPlayer.Name == 'doctorgoom' then
+	number = 335115076
+elseif game.Players.LocalPlayer.Name == 'LucasOtasaka' then
+	number = 382910936
+elseif game.Players.LocalPlayer.Name == 'GeiNaGe' then
+	number = 945431239
 
 elseif game.Players.LocalPlayer.Name == 'IiCoolkidgamerboycat' then
 	number = 1040344458
